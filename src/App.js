@@ -1,11 +1,13 @@
 import React from "react";
-import Nav from './component/Nav'
+// import Nav from './component/navigation/Nav';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import About from "./pages/about";
 import Poster from "./pages/poster";
+import Home from './component/home/Home';
 import Review from "./pages/review";
 import Contact from "./pages/contact";
-import Home from "./component/Home";
+import Nav from "./component/navigation/Nav";
+// import Home from './component/home/Home';
 // import Footer from "./component/Footer";
 
 function App() {

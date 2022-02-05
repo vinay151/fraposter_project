@@ -1,11 +1,12 @@
 import React from 'react';
 import Banner from './Banner';
-import Footer from './Footer';
+import Sticker from './Sticker';
+// import Footer from './Footer';
 const Home =()=>{
     return(
         <>
         <Banner/>
-        
+        <Sticker/>
         </>
     )
 }

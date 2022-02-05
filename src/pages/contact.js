@@ -1,8 +1,10 @@
 import React from 'react';
+
+// import tick from '../warranty.png';
 const Contact =()=>{
     return(
         <>
-        Contact page
+contact us       
         </>
     )
 }
