@@ -7,8 +7,9 @@ import Home from './component/home/Home';
 import Review from "./pages/review";
 import Contact from "./pages/contact";
 import Nav from "./component/navigation/Nav";
-// import Home from './component/home/Home';
-// import Footer from "./component/Footer";
+import Login from "./pages/login";
+import Register from "./pages/register";
+import Footer from './component/footer/Footer';
 
 function App() {
   return (
@@ -23,8 +24,11 @@ function App() {
       <Route exact path="/poster" element={ <Poster/> }/>
       <Route exact path="/review" element={ <Review/> }/>
       <Route exact path="/contact" element={ <Contact/> }/>
+      <Route exact path="/login" element={ <Login/> }/>
+      <Route exact path="/register" element={ <Register/> }/>
     </Routes>
     </BrowserRouter>
+    <Footer/>
     
 
     </>

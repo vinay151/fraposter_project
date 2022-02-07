@@ -30,14 +30,14 @@ const Sticker=()=>{
       };
     return(
         <>
-        <div className="container py-16 text-center">
+        <div className="container py-16 text-center px-28">
          <div className="">
              <h1 className='text-4xl font-bold'>Introducing Stickers</h1>
              <p className='py-4 text-xl '> Shopping Your Favourite BMW, Motorsports and Anime Stickers </p>
          </div>
          <div className="px-10">
          <OwlCarousel
-              className="slider-items owl-carousel"
+              className="slider-items owl-carousel sm:flex flex-col"
               {...options}
               id="slider_cat"
             >
