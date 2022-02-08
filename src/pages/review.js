@@ -1,8 +1,9 @@
 import React from 'react';
+import Breadcrumb from '../component/breadcrumb/Breadcrumb';
 const Review =()=>{
     return(
         <>
-        Review page
+        <Breadcrumb heading="Review"/>
         </>
     )
 }

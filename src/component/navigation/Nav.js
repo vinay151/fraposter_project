@@ -13,7 +13,7 @@ const Nav =()=>{
 
     return(
         <>
-        <div className="container-fluid fixed z-20 w-full">
+        <div className="container-fluid  sticky top-0 z-20 w-full">
        
       <nav className="bg-gray-800">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -25,7 +25,7 @@ const Nav =()=>{
                   src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
                   alt="Workflow"
                 /> */}
-                <h2 className='text-white text-2xl'>FRAPOSTER</h2>
+                <h2 className='text-white text-xl'>FRAPOSTER</h2>
               </div>
               <div className="hidden md:block">
                 <div className="ml-10 flex items-baseline space-x-4">
@@ -106,9 +106,10 @@ const Nav =()=>{
 </div>
                   <Link
                     to="#"
-                    className=""
+                    className="flex"
                   >
                  <FaShoppingCart className='text-2xl text-white'/>
+                 <span className='text-red-500 relative -top-3 -left-2'> 0 </span>
                   </Link>
                 </div>
               

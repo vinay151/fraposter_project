@@ -1,8 +1,8 @@
 import React from 'react';
-import Contact from '../../pages/contact';
+
 // import Slider from "react-slick";
 // import { baseUrl } from "./config";
-// import one from '../../svg/carousel.jpg'
+import one from '../../svg/one-image.webp';
 import './banner.css';
 const Banner =()=>{
     // const settings = {
@@ -19,7 +19,7 @@ const Banner =()=>{
     
     <div
   id="carouselDarkVariant"
-  className="carousel slide carousel-fade carousel-dark relative pt-16 bg-[#555354] z-10 opacity-100"
+  className="carousel slide carousel-fade carousel-dark relative  bg-[#555354] z-10 opacity-100"
   data-bs-ride="carousel"
 >
   {/* <!-- Indicators --> */}
@@ -74,7 +74,7 @@ const Banner =()=>{
     {/* <!-- Single item --> */}
     <div className="carousel-item relative float-left w-full">
       <img
-        src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(40).webp"
+        src={one}
         className="block w-full opacity-40"
         alt="Woman Reading a Book"
       />

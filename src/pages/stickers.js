@@ -1,10 +1,10 @@
 import React from 'react';
 import Breadcrumb from '../component/breadcrumb/Breadcrumb';
-const Poster =()=>{
+const Stickers =()=>{
     return(
         <>
-        <Breadcrumb heading="Poster"/>
+        <Breadcrumb heading="Stickers"/>
         </>
     )
 }
-export default Poster;
+export default Stickers;

@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link, useNavigate } from 'react-router-dom';
+import Breadcrumb from '../component/breadcrumb/Breadcrumb';
 
 // import tick from '../warranty.png';
 const Login =()=>{
@@ -15,9 +16,8 @@ const Login =()=>{
     }
     return(
         <>
-     {/* <!-- component --> */}
-{/* <!-- Container --> */}
-<div className="flex flex-col py-40 bg-gray-100 ">
+ <Breadcrumb heading="Login"/>
+<div className="flex flex-col py-20 bg-gray-100 ">
     {/* <!-- Auth Card Container --> */}
     <div className="grid place-items-center mx-2 my-20 sm:my-auto">
        

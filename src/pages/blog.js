@@ -1,10 +1,12 @@
 import React from 'react';
 import Breadcrumb from '../component/breadcrumb/Breadcrumb';
-const Poster =()=>{
+
+// import tick from '../warranty.png';
+const Blog =()=>{
     return(
         <>
-        <Breadcrumb heading="Poster"/>
+    <Breadcrumb heading="Blog"/>
         </>
     )
 }
-export default Poster;
+export default Blog;

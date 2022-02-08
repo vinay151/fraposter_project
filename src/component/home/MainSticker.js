@@ -2,11 +2,13 @@ import React from 'react';
 import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import {Link} from 'react-router-dom';
-const Sticker=()=>{
+const MainSticker=()=>{
     const options = {
         loop: true,
         margin: 10,
-        dots:true,
+        dots: true,
+      dotsEach: true,
+      dotData: true,
         autoplay: true,
         autoplayTimeout: 2000,
         autoplayHoverPause: true,
@@ -30,7 +32,7 @@ const Sticker=()=>{
       };
     return(
         <>
-        <div className="container py-16 text-center px-28">
+        <div className="container py-16 text-center px-12">
          <div className="">
              <h1 className='text-4xl font-bold'>Introducing Stickers</h1>
              <p className='py-4 text-xl '> Shopping Your Favourite BMW, Motorsports and Anime Stickers </p>
@@ -49,6 +51,7 @@ const Sticker=()=>{
                         <img
                           src="https://resources.stuff.co.nz/content/dam/images/4/y/o/6/8/g/image.related.StuffThumbnailSixteenByNine.1600x900.2128uc.11ys6n.png/1599630686540.jpg?format=pjpg&crop=16:9,smart&width=200"
                           alt="abc"
+                          className='h-72'
                         />
                         <h5>Dad to be reunited with twins</h5>
                         {/* <!-- <div className="all_items">45 item</div> --> */}
@@ -66,6 +69,7 @@ const Sticker=()=>{
                         <img
                           src="https://resources.stuff.co.nz/content/dam/images/4/y/m/4/c/l/image.related.StuffThumbnailSixteenByNine.1600x900.4yo8nm.120x1p.png/1599631255429.jpg?format=pjpg&crop=16:9,smart&width=200"
                           alt="abc"
+                          className='h-72'
                         />
                         <h5>Afternoon trivia challenge</h5>
                         {/* <!-- <div className="all_items">49 item</div> --> */}
@@ -83,6 +87,7 @@ const Sticker=()=>{
                         <img
                           src="https://resources.stuff.co.nz/content/dam/images/4/y/o/8/e/w/image.related.StuffThumbnailSixteenByNine.1600x900.211s9q.120x1p.png/1599631255429.jpg?format=pjpg&crop=16:9,smart&width=200"
                           alt="abc"
+                          className='h-72'
                         />
                         <h5>Fisheran witness rare sight of white shark</h5>
                         {/* <!-- <div className="all_items">7 item</div> --> */}
@@ -100,6 +105,7 @@ const Sticker=()=>{
                         <img
                           src="https://resources.stuff.co.nz/content/dam/images/4/y/o/9/0/p/image.related.StuffThumbnailSixteenByNine.1600x900.2125s7.120x1p.png/1599631255429.jpg?format=pjpg&crop=16:9,smart&width=200"
                           alt="abc"
+                          className='h-72'
                         />
                         <h5>The subrau legacy is no more</h5>
                         {/* <!-- <div className="all_items">19 item</div> --> */}
@@ -117,6 +123,7 @@ const Sticker=()=>{
                         <img
                           src="https://resources.stuff.co.nz/content/dam/images/4/y/o/5/o/5/image.related.StuffThumbnailSixteenByNine.1600x900.4yo8sz.120x1p.png/1599631255429.jpg?format=pjpg&crop=16:9,smart&width=200"
                           alt="abc"
+                          className='h-72'
                         />
                         <h5>Many losers if Austria snares rugby</h5>
                         {/* <!-- <div className="all_items">40 item</div> --> */}
@@ -136,4 +143,4 @@ const Sticker=()=>{
         </>
     )
 }
-export default Sticker
+export default MainSticker;
