@@ -1,92 +1,180 @@
-import React,{useState} from 'react';
-// import '../component/navigation/nav.css'
-import { Transition } from "@headlessui/react";
-import {FaAngleDown,FaUserCircle,FaShoppingCart,FaSearch} from 'react-icons/fa';
-import { Link, useNavigate } from 'react-router-dom';
+import React,{useState,Fragment} from 'react';
+import { Transition, Menu } from "@headlessui/react"
+import {Link,useNavigate} from 'react-router-dom';
+import {FaUserCircle,FaSearch,FaShoppingCart, FaAngleDown} from 'react-icons/fa'
 const Nav =()=>{
   const navigate=useNavigate();
   function userClick(event){
     event.preventDefault();
     navigate("/login")
   }
-    const [isOpen, setIsOpen] = useState(false);
-
-    return(
-        <>
-        <div className="container-fluid  sticky top-0 z-20 w-full">
-       
-      <nav className="bg-gray-800">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="flex items-center justify-evenly h-16">
-            <div className="flex items-center">
-              <div className="flex-shrink-0 ">
-                {/* <img
-                  className="h-8 w-8"
-                  src="https://tailwindui.com/img/logos/workflow-mark-indigo-500.svg"
-                  alt="Workflow"
-                /> */}
-                <h2 className='text-white text-xl'>FRAPOSTER</h2>
-              </div>
-              <div className="hidden md:block">
-                <div className="ml-10 flex items-baseline space-x-4">
-                  <Link
-                    to="/"
-                    className=" hover:bg-gray-700 text-white px-3 py-2 rounded-md text-xl font-medium"
-                  >
-                    Home
-                  </Link>
-
-                  <Link
-                    to="/about"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium"
-                  >
-                    About Us
-                  </Link>
-
-                  <Link
-                    to="/poster"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium"
-                  >
-                    Poster
-                  </Link>
-
-                  <Link
-                    to="sticker"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium"
-                  >
-                    Stickers
-                  </Link>
-
-                  <Link
-                    to="review"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium"
-                  >
-                    Review
-                  </Link>
-                  <Link
-                    to="track"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium"
-                  >
-                    Track Your Order
-                  </Link>
-                  <Link
-                    to="contact"
-                    className="text-gray-300 hover:bg-gray-700 hover:text-white px-3 py-2 rounded-md text-xl font-medium"
-                  >
-                 Contact
-                  </Link>
-                
+  const [isOpen, setIsOpen] = useState(false)
+  const [isUp, setIsUp] = useState(true)
+  return(
+    <>
+ < div>
+      <nav className="bg-white-800 shadow-lg">
+        <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-7">
+          <div className="flex items-center justify-between h-20">
+            <div className="flex-shrink-0">
+              <Link className="cursor-pointer" to='/'>
+                <h1 className='text-xl'> FRAPOSTER </h1>
+              </Link>
+            </div>
+            <div className="hidden md:block">
+              <div className="flex items-center space-x-3">
                 <Link
-                    to="/login"
-                    className=""
-                    onClick={userClick}
+                  to="/"
+                  activeClassName="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
+                  className={
+                    "hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black hover:font-medium px-3 py-2 rounded-md text-sm"
+                  }
+                >
+                  Home
+                </Link>
+
+                <Link
+                  to="/about"
+                  activeClassName="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
+                  className="hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black hover:font-medium px-3 py-2 rounded-md text-sm"
+                >
+                  About Us
+                </Link>
+                {/* 
+                <Link
+                  to="/services"
+                  partiallyActive={true}
+                  activeClassName=" bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
+                  className={
+
+                  }
+                >
+                  Services
+                  <FaChevronUp className="ml-1 mt-0.5" /> */}
+                <Menu as="div" className="relative inline-block text-left">
+                  <div>
+                    <Menu.Button>
+                      <Link
+                        to="/poster"
+                        partiallyActive={true}
+                        activeClassName="flex bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
+                        className={
+                          "flex hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                        }
+                      >
+                        Poster
+                        <FaAngleDown
+                          className="-mr-1 ml-2 h-5 w-5"
+                          aria-hidden="true"
+                        />
+                      </Link>
+                    </Menu.Button>
+                  </div>
+
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-100"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
                   >
-                 <FaUserCircle className='text-2xl text-white'/>
-                  </Link>
-                  <Link to="#" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalXl">
-  <FaSearch className="text-2xl text-white" />
+                    <Menu.Items className="origin-top-right absolute right-0 mt-2 w-40 rounded-md shadow-lg z-20 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <div>
+                        <Menu.Item>
+                          <Link
+                            to="/anime"
+                            activeClassName="flex bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
+                            className={
+                              "flex hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                            }
+                          >
+                           Anime
+                          </Link>
+                        </Menu.Item>
+                        <Menu.Item>
+                          <Link
+                            to="/formula1"
+                            activeClassName="flex bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
+                            className={
+                              "flex hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                            }
+                          >
+                           Formula1
+                          </Link>
+                        </Menu.Item>
+                        <Menu.Item>
+                          <Link
+                            to="/formula1"
+                            activeClassName="flex bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
+                            className={
+                              "flex hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                            }
+                          >
+                            Formula1
+                          </Link>
+                        </Menu.Item>
+                        <Menu.Item>
+                          <Link
+                            to="/charposter"
+                            activeClassName="flex bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
+                            className={
+                              "flex hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                            }
+                          >
+                            Character Poster
+                          </Link>
+                        </Menu.Item>
+                      </div>
+                    </Menu.Items>
+                  </Transition>
+                </Menu>
+                {/* </Link> */}
+
+                <Link
+                  to="/sticker"
+                  activeClassName="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
+                  className="hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                >
+                  Stickers
+                </Link>
+
+                <Link
+                  to="/review"
+                  activeClassName="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
+                  className="hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                >
+                  Review
+                </Link>
+                <Link
+                  to="/track"
+                  activeClassName="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
+                  className="hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                >
+                  Track Your Order
+                </Link>
+                <Link
+                  to="/contact"
+                  activeClassName="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
+                  className={
+                    "hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                  }
+                >
+                  Contact Us
+                </Link>
+                <Link
+                  to="#"
+                  
+                  className={
+                    " flex space-x-3  px-3 py-2"
+                  }
+                >
+                <FaUserCircle className='text-2xl cursor-pointer' onClick={userClick}/>
+                <Link to="#" type="button" data-bs-toggle="modal" data-bs-target="#exampleModalXl">
+  <FaSearch className="text-2xl " />
       </Link>
-      <div className="modal fade fixed -top-6 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto" id="exampleModalXl" tabindex="-1" aria-labelledby="exampleModalXlLabel" aria-modal="true" role="dialog">
+                <div className="modal fade fixed -top-6 left-0 hidden w-full h-full outline-none overflow-x-hidden overflow-y-auto" id="exampleModalXl" tabindex="-1" aria-labelledby="exampleModalXlLabel" aria-modal="true" role="dialog">
   <div className="modal-dialog modal-xl relative w-auto pointer-events-none">
     <div className="modal-content border-none shadow-lg relative flex flex-col w-full pointer-events-auto bg-white bg-clip-padding rounded-md outline-none text-current">
       <div className="modal-header flex flex-shrink-0 items-center justify-between p-4  border-gray-200 rounded-t-md">
@@ -104,24 +192,29 @@ const Nav =()=>{
     </div>
   </div>
 </div>
-                  <Link
-                    to="#"
-                    className="flex"
-                  >
-                 <FaShoppingCart className='text-2xl text-white'/>
-                 <span className='text-red-500 relative -top-3 -left-2'> 0 </span>
-                  </Link>
-                </div>
-              
+                <FaShoppingCart className='text-2xl cursor-pointer'/>
                 
+                <span className='text-red-500 relative -top-3 -left-6'> 0 </span>
+                </Link>
               </div>
             </div>
-            <div className="-mr-2 flex md:hidden ">
-          
+            <div className="mr-20 flex md:hidden z-20">
+            <div
+                  className={
+                    " flex space-x-1  px-3 py-2 "
+                  }
+                >
+                <FaUserCircle className='text-2xl' onClick={userClick}/>
+                <FaSearch className='text-2xl'/>
+                 
+
+                <FaShoppingCart className='text-2xl'/>
+                <span className='text-red-500 relative -top-3 -left-6'> 0 </span>
+                </div>
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="bg-gray-900 inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                className="bg-gradient-to-r from-slate-500 to-white-500 text-black inline-flex items-center justify-center p-2 rounded-md text-white-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >
@@ -160,84 +253,164 @@ const Nav =()=>{
                   </svg>
                 )}
               </button>
-              
             </div>
           </div>
         </div>
 
         <Transition
           show={isOpen}
-          enter="transition ease-out duration-100 transform"
+          enter="transition ease-out duration-200 transform"
           enterFrom="opacity-0 scale-95"
           enterTo="opacity-100 scale-100"
           leave="transition ease-in duration-75 transform"
           leaveFrom="opacity-100 scale-100"
           leaveTo="opacity-0 scale-95"
         >
-          {(ref) => (
-            <div className="md:hidden" id="mobile-menu">
+          {ref => (
+            <div
+              className="md:hidden absolute shadow rounded bg-white w-full z-20"
+              id="mobile-menu"
+            >
               <div ref={ref} className="px-2 pt-2 pb-3 space-y-1 sm:px-3">
                 <Link
-                  to="#"
-                  className="hover:bg-gray-700 text-white block px-3 py-2 rounded-md text-base font-medium"
+                  to="/"
+                  activeClassName="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
+                  className="hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium  block px-3 py-2 rounded-md text-base"
                 >
                   Home
                 </Link>
 
                 <Link
-                  to="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  to="/whoweare"
+                  activeClassName="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
+                  className="hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium  block px-3 py-2 rounded-md text-base"
                 >
                   About Us
                 </Link>
 
-                <Link
-                  to="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+              
+
+                <Menu
+                  as="div"
+                  className="relative inline-block text-left w-full"
+                  onClick={() => {
+                    isUp === true ? setIsUp(!isUp) : setIsUp(false)
+                  }}
                 >
-                  Poster
-                </Link>
+                  <div>
+                    <Menu.Button className={"w-full"}>
+                      <Link
+                        to="/poster"
+                        // partiallyActive={true}
+                        activeClassName="flex bg-gradient-to-r flex justify-between w-full from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
+                        className={
+                          "flex justify-between w-full hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                        }
+                      >
+                        Poster
+                        <FaAngleDown
+                          className="-mr-1 h-5 w-5"
+                          aria-hidden="true"
+                        />
+                      </Link>
+                    </Menu.Button>
+                  </div>
+
+                  <Transition
+                    as={Fragment}
+                    enter="transition ease-out duration-100"
+                    enterFrom="transform opacity-0 scale-95"
+                    enterTo="transform opacity-100 scale-100"
+                    leave="transition ease-in duration-75"
+                    leaveFrom="transform opacity-100 scale-100"
+                    leaveTo="transform opacity-0 scale-95"
+                  >
+                    <Menu.Items className="origin-top-right absolute right-0 mt-2 w-78 rounded-md shadow-lg z-20 bg-white ring-1 ring-black ring-opacity-5 focus:outline-none">
+                      <div>
+                        <Menu.Item>
+                          <Link
+                            to="/anime"
+                            activeClassName="flex bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-3 rounded-md text-sm"
+                            className={
+                              "flex hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-3 rounded-md text-sm"
+                            }
+                          >
+                          Anime
+                          </Link>
+                        </Menu.Item>
+                        <Menu.Item>
+                          <Link
+                            to="/formula1"
+                            activeClassName="flex bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
+                            className={
+                              "flex hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                            }
+                          >
+                          Formula1
+                          </Link>
+                        </Menu.Item>
+                        <Menu.Item>
+                          <Link
+                            to="/poster"
+                            activeClassName="flex bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
+                            className={
+                              "flex hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                            }
+                          >
+                          Poster
+                          </Link>
+                        </Menu.Item>
+                        <Menu.Item>
+                          <Link
+                            to="/charposter"
+                            activeClassName="flex bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
+                            className={
+                              "flex hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                            }
+                          >
+                           Charactrer Poster
+                          </Link>
+                        </Menu.Item>
+                      </div>
+                    </Menu.Items>
+                  </Transition>
+                </Menu>
 
                 <Link
-                  to="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  to="/sticker"
+                  activeClassName="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
+                  className="hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium  block px-3 py-2 rounded-md text-base"
                 >
                   Stickers
                 </Link>
-
                 <Link
-                  to="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  to="/review"
+                  activeClassName="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
+                  className="hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium  block px-3 py-2 rounded-md text-base"
                 >
                   Review
                 </Link>
                 <Link
-                  to="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  to="/track"
+                  activeClassName="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
+                  className="hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium  block px-3 py-2 rounded-md text-base"
                 >
-                Track Your Order
+                  Track your order
                 </Link>
                 <Link
-                  to="#"
-                  className="text-gray-300 hover:bg-gray-700 hover:text-white block px-3 py-2 rounded-md text-base font-medium"
+                  to="/contact"
+                  activeClassName="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
+                  className="hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium  block px-3 py-2 rounded-md text-base"
                 >
-                  Contact 
+                  Contact Us
                 </Link>
-                <hr />
-                <div className="ml-3 ">
-                 <button className='px-40 mt-2 py-2 bg-black text-white rounded-md'> Log In </button>
-                 <button className='px-32 mt-4 py-2 bg-orange-500 text-white rounded-md'> Create Account </button>
-                </div>
               </div>
             </div>
           )}
         </Transition>
       </nav>
-
     </div>
-         
-      
-        </>
-    )
+    </>
+  )
 }
 export default Nav;

@@ -1,10 +1,27 @@
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 
-// import Slider from "react-slick";
+
 // import { baseUrl } from "./config";
 import one from '../../svg/one-image.webp';
-import './banner.css';
+
 const Banner =()=>{
+
+  const navigate = useNavigate();
+  function formulaClick(event){
+    event.preventDefault();
+    navigate("/formula1")
+  }
+  const character = useNavigate();
+  function charClick(event){
+    event.preventDefault();
+    character("/charposter")
+  }
+  const anime = useNavigate();
+  function animeClick(event){
+    event.preventDefault();
+    anime("/anime")
+  }
     // const settings = {
     //     dots: true,
     //     fade: true,
@@ -54,7 +71,7 @@ const Banner =()=>{
       />
       <div className="carousel-caption hidden md:block absolute text-center lg:bottom-40 sm:bottom-0 md:bottom-0">
         <h5 className="text-xl mb-10 text-white"> Poster and Design from the Pinccale of Formula1 </h5>
-        <button className='px-10 py-3  text-white text-2xl hover:bg-orange-400 hover:text-black rounded-md cursor-pointer border-2 border-orange-400'> View All </button>
+        <button className='px-10 py-3  text-white text-2xl hover:bg-orange-400 hover:text-black rounded-md cursor-pointer border-2 border-orange-400' onClick={formulaClick}> View All </button>
       </div>
     </div>
 
@@ -67,7 +84,7 @@ const Banner =()=>{
       />
        <div className="carousel-caption hidden md:block absolute text-center lg:bottom-40 sm:bottom-0 md:bottom-0">
         <h5 className="text-xl mb-10 text-white"> Character Poster </h5>
-        <button className='px-10 py-3  text-white text-2xl hover:bg-orange-400 hover:text-black rounded-md cursor-pointer border-2 border-orange-400'> View All </button>
+        <button className='px-10 py-3  text-white text-2xl hover:bg-orange-400 hover:text-black rounded-md cursor-pointer border-2 border-orange-400' onClick={charClick} > View All </button>
       </div>
     </div>
 
@@ -75,12 +92,12 @@ const Banner =()=>{
     <div className="carousel-item relative float-left w-full">
       <img
         src={one}
-        className="block w-full opacity-40"
+        className="block w-full opacity-40 bg-no-repeat object-center"
         alt="Woman Reading a Book"
       />
        <div className="carousel-caption hidden md:block absolute text-center lg:bottom-40 sm:bottom-0 md:bottom-0">
         <h5 className="text-xl mb-10 text-white"> Check Out our Favourite Anime Collection  </h5>
-        <button className='px-10 py-3  text-white text-2xl hover:bg-orange-400 hover:text-black rounded-md cursor-pointer border-2 border-orange-400'> Shop Now </button>
+        <button className='px-10 py-3  text-white text-2xl hover:bg-orange-400 hover:text-black rounded-md cursor-pointer border-2 border-orange-400' onClick={animeClick}> Shop Now </button>
       </div>
     </div>
   </div>
@@ -104,7 +121,7 @@ const Banner =()=>{
     <span className="visually-hidden">Next</span>
   </button>
 </div>
-           
+
 {/* <Contact/> */}
         </>
     )

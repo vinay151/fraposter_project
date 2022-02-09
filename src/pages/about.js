@@ -6,7 +6,7 @@ const About=()=>{
     <>
     <Breadcrumb heading="About Us"/>
   <div className="container py-16">
-  <div className="lg:w-10/12 md:w-full mx-auto">
+  <div className="lg:w-10/12 md:w-full lg:mx-auto mx-4">
   <div className="text-center">
    <h2 className='text-7xl font-bold'>About us</h2>
     <h4 className='text-4xl font-semibold mt-8'>CUSTOM STORE</h4>

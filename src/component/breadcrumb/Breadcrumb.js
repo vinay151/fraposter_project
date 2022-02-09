@@ -11,7 +11,7 @@ const Breadcrumb=(props)=>{
     return(
       
         <>
-       <div className="container-fluid bg-[#FAF8FF] px-32 py-2">
+       <div className="container-fluid bg-[#FAF8FF] lg:px-32 lg:py-2 px-4">
        <nav class="rounded-md w-full ">
   <ol class="list-reset flex">
     <li><a href="/" class="text-blue-600 hover:text-blue-700" onClick={homeClick} >Home</a></li>

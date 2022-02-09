@@ -13,6 +13,10 @@ import Footer from './component/footer/Footer';
 import Blog from "./pages/blog";
 import Breadcrumb from "./component/breadcrumb/Breadcrumb";
 import Stickers from "./pages/stickers";
+import Anime from "./pages/anime";
+import Formula from "./pages/formula";
+import CharPoster from "./pages/charPoster";
+import Track from "./pages/track";
 
 function App() {
   return (
@@ -27,10 +31,14 @@ function App() {
       <Route exact path="/poster" element={ <Poster/> }/>
       <Route exact path="/review" element={ <Review/> }/>
       <Route exact path="/sticker" element={ <Stickers/> }/>
+      <Route exact path="/track" element={ <Track/> }/>
       <Route exact path="/contact" element={ <Contact/> }/>
       <Route exact path="/login" element={ <Login/> }/>
       <Route exact path="/register" element={ <Register/> }/>
       <Route exact path="/blog" element={ <Blog/> }/>
+      <Route exact path="/anime" element={ <Anime/> }/>
+      <Route exact path="/formula1" element={ <Formula/> }/>
+      <Route exact path="/charposter" element={ <CharPoster/> }/>
     </Routes>
     </BrowserRouter>
     <Footer/>

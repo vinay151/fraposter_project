@@ -6,16 +6,16 @@ const Testimonial =()=>{
         <>
      <div className="container py-16 px-24">
       <div className="">
-          <div className="border-2 border-orange-500 w-2/5 flex items-center ">
+          <div className="border-2 border-orange-500 lg:w-2/5 w-full flex items-center ">
               <h1 className='bg-orange-500 w-36 text-white font-semibold px-6 py-3 text-2xl text-center'> REVIEW </h1>
           
             <div className="flex items-center">
-                <FaStar className='text-xl mx-1'/>
-                <FaStar className='text-xl mx-1'/>
-                <FaStar className='text-xl mx-1'/>
-                <FaStar className='text-xl mx-1'/>
-                <FaStar className='text-xl mx-1'/>
-                <p className='text-xl ml-2'> from 38 review </p>
+                <FaStar className='lg:text-xl lg:mx-1 ml-1 text-sm'/>
+                <FaStar className='lg:text-xl lg:mx-1 ml-1 text-sm'/>
+                <FaStar className='lg:text-xl lg:mx-1 ml-1 text-sm'/>
+                <FaStar className='lg:text-xl lg:mx-1 ml-1 text-sm'/>
+                <FaStar className='lg:text-xl lg:mx-1 ml-1 text-sm'/>
+                <p className='lg:text-xl text-lg ml-2'> from 38 review </p>
                 </div> 
               
           </div>
