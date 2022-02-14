@@ -28,31 +28,35 @@ const MainSticker=()=>{
             <div>
         
         
-        <Slider {...settings} className="py-4 px-10 ">
+        <Slider {...settings} className="py-4 px-10 w-full  ">
           <div>
-          <img src={one} alt="" />
+          <img src={one} alt="" className='w-full block'/>
           </div>
           <div>
-          <img src={two} alt="" />
+          <img src={two} alt="" className='w-full block'/>
           </div>
           <div>
-          <img src={three} alt="" />
+          <img src={one} alt="" className='w-full block'/>
           </div>
           <div>
-          <img src={one} alt="" />
+          <img src={three} alt="" className='w-full block'/>
           </div>
           <div>
-          <img src={three} alt="" />
+          <img src={one} alt="" className='w-full block'/>
           </div>
           <div>
-          <img src={two} alt="" />
+          <img src={two} alt="" className='w-full block'/>
           </div>
           <div>
-          <img src={one} alt="" />
+          <img src={three} alt="" className='w-full block'/>
           </div>
           <div>
-          <img src={three} alt="" />
+          <img src={one} alt="" className='w-full block'/>
           </div>
+          <div>
+          <img src={two} alt="" className='w-full block'/>
+          </div>
+          
         </Slider>
       </div>
       <div className="py-20">

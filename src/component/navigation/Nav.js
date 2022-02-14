@@ -8,6 +8,11 @@ const Nav =()=>{
     event.preventDefault();
     navigate("/login")
   }
+  const click=useNavigate();
+  function cartClick(event){
+    event.preventDefault();
+    click("/cart")
+  }
   const [isOpen, setIsOpen] = useState(false)
   const [isUp, setIsUp] = useState(true)
   return(
@@ -56,7 +61,7 @@ const Nav =()=>{
                     <Menu.Button>
                       <Link
                         to="/poster"
-                        partiallyActive={true}
+                        // partiallyActive={true}
                         activeClassName="flex bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
                         className={
                           "flex hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
@@ -192,7 +197,7 @@ const Nav =()=>{
     </div>
   </div>
 </div>
-                <FaShoppingCart className='text-2xl cursor-pointer'/>
+                <FaShoppingCart className='text-2xl cursor-pointer' onClick={cartClick}/>
                 
                 <span className='text-red-500 relative -top-3 -left-6'> 0 </span>
                 </Link>

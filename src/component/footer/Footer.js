@@ -1,5 +1,5 @@
 import React from "react";
-import { FaEnvelope, FaPhoneAlt } from "react-icons/fa";
+import { FaEnvelope, FaPhoneAlt, FaFacebook, FaPinterestP, FaShare, FaTwitter, FaWhatsapp, FaYoutube, FaLinkedinIn  } from "react-icons/fa";
 import { Link } from "react-router-dom";
 const Footer = () => {
   return (
@@ -13,6 +13,14 @@ const Footer = () => {
          
            <p className="flex items-center mt-5"> <FaEnvelope/> <small className="ml-2 text-xl">@Support@fraposter.com</small> </p>
            <p className="flex items-center mt-2"> <FaPhoneAlt/> <small className="ml-2 text-xl"> +917895626555 </small> </p>
+           <div className="flex items-center space-x-6 mt-5">
+                 
+                    <p className='bg-gray-300 text-black rounded-xl cursor-pointer hover:bg-blue-900 p-2 hover:text-white'> <FaFacebook className='text-xl '/> </p>
+                    <p className='bg-gray-300 text-black rounded-xl cursor-pointer p-2 hover:bg-cyan-500 hover:text-white'> <FaTwitter  className='text-xl '/> </p>
+                    <p className='bg-gray-300 text-black rounded-xl cursor-pointer p-2 hover:bg-red-900 hover:text-white'> <FaPinterestP  className='text-xl '/> </p>
+                    <p className='bg-gray-300 text-black rounded-xl cursor-pointer p-2 hover:bg-red-600 hover:text-white'> <FaYoutube  className='text-xl '/> </p>
+                    <p className='bg-gray-300 text-black rounded-xl cursor-pointer p-2 hover:bg-blue-500 hover:text-white'> <FaLinkedinIn  className='text-xl '/> </p>
+                 </div>
          </div>
    
            
@@ -39,13 +47,13 @@ const Footer = () => {
           <p className="ml-2"> Email me with news and offers </p>
         </div>
         <div className="">
-          <button type="submit" className="w-full bg-orange-500 px-36 py-4 mt-6 rounded-lg text-black text-base font-semibold "> <p className="flex items-center"><FaEnvelope className="text-xl"/> <small className="text-lg ml-2">  Subscribe </small> </p> </button>
+          <button type="submit" className="w-full bg-orange-500 flex items-center justify-center  py-4 mt-6 rounded-lg text-black text-base font-semibold "> <FaEnvelope className="text-xl"/>   Subscribe  </button>
         </div>
          </div>
         </div>
         <hr className="w-full"/>
-        <div className="mt-12 text-white text-center">
-          <h2 className="text-2xl"> Copyright &copy; 2022 All Rights Reserve @Fraposter </h2>
+        <div className="mt-10 text-white text-center">
+          <h2 className="text-xl"> Copyright &copy; 2022 All Rights Reserve @Fraposter </h2>
         </div>
       </div>
      

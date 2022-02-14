@@ -17,6 +17,8 @@ import Anime from "./pages/anime";
 import Formula from "./pages/formula";
 import CharPoster from "./pages/charPoster";
 import Track from "./pages/track";
+import Cart from "./pages/cart";
+import ReviewForm from "./pages/reviewForm";
 
 function App() {
   return (
@@ -37,8 +39,10 @@ function App() {
       <Route exact path="/register" element={ <Register/> }/>
       <Route exact path="/blog" element={ <Blog/> }/>
       <Route exact path="/anime" element={ <Anime/> }/>
+      <Route exact path="/form" element={ <ReviewForm/> }/>
       <Route exact path="/formula1" element={ <Formula/> }/>
       <Route exact path="/charposter" element={ <CharPoster/> }/>
+      <Route exact path="/cart" element={ <Cart/> }/>
     </Routes>
     </BrowserRouter>
     <Footer/>

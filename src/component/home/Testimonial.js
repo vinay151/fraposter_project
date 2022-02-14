@@ -1,10 +1,39 @@
 import React from 'react';
-import {FaStar} from 'react-icons/fa';
+import {FaStar,FaQuoteLeft,FaQuoteRight} from 'react-icons/fa';
+import Slider from "react-slick";
+import test from '../../svg/stick.PNG';
+import './banner.css';
 // import tick from '../warranty.png';
 const Testimonial =()=>{
+  const testData=[
+    {
+      testimg:test,
+      para:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quod natus laboriosam reprehenderit ex sed maxime molestias nobis ullam doloribus!",
+      head:"Alex Smith"
+    },
+    {
+      testimg:test,
+      para:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quod natus laboriosam reprehenderit ex sed maxime molestias nobis ullam doloribus!",
+      head:"Jhon Smith"
+    },
+    {
+      testimg:test,
+      para:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quod natus laboriosam reprehenderit ex sed maxime molestias nobis ullam doloribus!",
+      head:"Derren"
+    },
+  ]
+  const settings = {
+    dots: true,
+    infinite: true,
+    speed: 500,
+   autoPlay:true,
+   autoplaySpeed: 500,
+    slidesToShow: 1,
+    slidesToScroll: 1
+  };
     return(
         <>
-     <div className="container py-16 px-24">
+     <div className="container-fluid py-16 px-32 bg-gray-400">
       <div className="">
           <div className="border-2 border-orange-500 lg:w-2/5 w-full flex items-center ">
               <h1 className='bg-orange-500 w-36 text-white font-semibold px-6 py-3 text-2xl text-center'> REVIEW </h1>
@@ -19,7 +48,45 @@ const Testimonial =()=>{
                 </div> 
               
           </div>
-          <div className="">
+         
+          <div className="grid grid-cols-1 items-center justify-items-center mt-10">
+          <Slider {...settings} className=" lg:w-4/5 w-full">
+         {
+           testData.map((e,i)=>{
+             return(
+               <>
+           <div className="lg:w-3/5 w-full lg:p-5 mx-auto">
+                <div className="w-36 h-36 mx-auto ">
+                  <img src={e.testimg} alt="" className='w-36 h-36  border-4 border-orange-500 rounded-full'/>
+                </div>
+                <div className="text-center mt-5">
+                <FaQuoteLeft/>
+                  <p className='text-lg'> {e.para} </p>
+                  <div className="flex items-center justify-center mt-3">
+                <FaStar className='lg:text-xl lg:mx-1 ml-1 text-sm text-orange-500'/>
+                <FaStar className='lg:text-xl lg:mx-1 ml-1 text-sm text-orange-500'/>
+                <FaStar className='lg:text-xl lg:mx-1 ml-1 text-sm text-orange-500'/>
+                <FaStar className='lg:text-xl lg:mx-1 ml-1 text-sm text-orange-500'/>
+                <FaStar className='lg:text-xl lg:mx-1 ml-1 text-sm text-orange-500'/>
+             
+                </div> 
+                    <FaQuoteRight style={{position:"relative",top:"-50px" ,left:"485px"}}/>
+                 
+                  <h1 className='text-2xl font-bold mt-2'> {e.head} </h1>
+                </div>
+              </div>
+               </>
+
+             )
+           })
+         }
+             
+              
+              </Slider>
+          </div>
+         
+        
+          {/* <div className="">
           <section class="relative mt-10  overflow-hidden">
   <img class="absolute top-0 right-0 -mr-80 -mt-80" src="zospace-assets/lines/circle.svg" alt=""/>
   <img class="hidden lg:block absolute bottom-0 left-0 w-96" src="zospace-assets/lines/half-double-circle.svg" alt=""/>
@@ -89,7 +156,7 @@ const Testimonial =()=>{
     </div>
   </div>
 </section>
-          </div>
+          </div> */}
       </div>
      </div>
         </>
