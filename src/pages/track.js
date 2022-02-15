@@ -9,18 +9,18 @@ const Track=()=>{
           <div className="bg-white shadow-md rounded-lg h-96 p-5">
           <div className="flex items-center pb-10 space-x-3">
           <FaShippingFast className='text-3xl'/>
-              <h6 className='text-xl text-gray-600'> Track status of Your shipment </h6>
+              <h6 className='lg:text-xl text-base text-gray-600'> Track status of Your shipment </h6>
           </div>
           <hr />
-          <div className="">
+          <div className="w-full">
               <form >
-                  <div className="mt-10 text-lg text-gray-600">
+                  <div className="mt-10 lg:text-lg text-base text-gray-600">
                       <label htmlFor=""> Search By: </label>
-                      <input type="radio"  className='ml-1' /> Order Id
-                      <input type="radio"  className='ml-10'/> AWB
+                      <input type="radio"  className='' /> Order Id
+                      <input type="radio"  className='ml-2'/> AWB
                   </div>
                   <div className="mt-8">
-                      <input type="text" name="" id="" placeholder='Enter Order Id/AWB No.' className='w-1/2 py-4 px-2 border-2 border-gray-300 outline-none'/>
+                      <input type="text" name="" id="" placeholder='Enter Order Id/AWB No.' className='lg:w-1/2 w-full py-4 px-2 border-2 border-gray-300 outline-none'/>
                      
                   </div>
                   <div className="mt-8">

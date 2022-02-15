@@ -1,14 +1,82 @@
-import React from 'react';
+import React,{useState} from 'react';
 import Breadcrumb from '../component/breadcrumb/Breadcrumb';
 import {FaStar} from 'react-icons/fa';
 import r from '../svg/twostick.PNG';
-import { useNavigate } from 'react-router-dom';
+// import { useNavigate } from 'react-router-dom';
+import ReviewForm from './reviewForm';
+import { withStyles } from '@material-ui/core/styles';
+import MuiAccordion from '@material-ui/core/Accordion';
+import MuiAccordionSummary from '@material-ui/core/AccordionSummary';
+import MuiAccordionDetails from '@material-ui/core/AccordionDetails';
+// import Typography from '@material-ui/core/Typography';
+
+const Accordion = withStyles({
+  root: {
+    border: '1px solid rgba(0, 0, 0, .125)',
+    boxShadow: 'none',
+    '&:not(:last-child)': {
+      borderBottom: 0,
+    },
+    '&:before': {
+      display: 'none',
+    },
+    '&$expanded': {
+      margin: 'auto',
+    },
+  },
+  expanded: {},
+})(MuiAccordion);
+
+const AccordionSummary = withStyles({
+  root: {
+    backgroundColor: 'rgba(0, 0, 0, .03)',
+    borderBottom: '1px solid rgba(0, 0, 0, .125)',
+    marginBottom: -1,
+    minHeight: 56,
+    
+    '&$expanded': {
+      minHeight: 56,
+    
+    },
+  },
+  content: {
+    '&$expanded': {
+      margin: '12px 0',
+    
+    },
+  },
+  expanded: {},
+})(MuiAccordionSummary);
+
+const AccordionDetails = withStyles((theme) => ({
+  root: {
+    padding: theme.spacing(2),
+  },
+}))(MuiAccordionDetails);
+
+
 const Review =()=>{
-  const navigate=useNavigate();
-  function reviewClick(event){
-    event.preventDefault();
-    navigate("/form");
-  }
+//  const [click, setClick]= useState("Write Review");
+//  const reviewClick=()=>{
+//    if(
+//     setClick("Cancel Review");
+//    ){
+
+//    }
+ 
+//    else{
+//      setClick("Write Review")
+//    }
+   
+//  }
+const [expanded, setExpanded] = React.useState('panel1');
+
+const handleChange = (panel) => (event, newExpanded) => {
+  setExpanded(newExpanded ? panel : false);
+};
+
+
+
    const reviewData=[
      {
        head:"There's a reason they're number one",
@@ -34,9 +102,9 @@ const Review =()=>{
         <Breadcrumb heading="Review"/>
         <div className="container-fluid py-20 px-32">
         <h1 className='text-4xl font-extrabold'>REVIEW</h1>
-        <div className="border-2 ">
-          <div className="flex justify-between">
-        <div className="p-4">
+        <div className="border-2 mt-5 ">
+          <div className="">
+        <div className="p-6">
         <div className="flex space-x-1">
                 <FaStar className='lg:text-xl  text-sm text-orange-500'/>
                 <FaStar className='lg:text-xl  text-sm text-orange-500'/>
@@ -47,26 +115,45 @@ const Review =()=>{
                 </div> 
         <h1 className='mt-1 text-lg'>Based on 40 review</h1>
         </div>
-        <div className="p-4">
-          <button className='py-3 px-6 border-2' onClick={reviewClick}> Write a Review </button>
+        <div className="p-6">
+        <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
+        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header" >
+      
+          <button className='py-3 px-6 border-2' > Write Review </button>
+        
+    
+        </AccordionSummary>
+        <AccordionDetails>
+          <ReviewForm/>
+        </AccordionDetails>
+      </Accordion>
         </div>
+      
+      
+    </div>
+        <div>
+     
         </div>
         <div className="flex justify-between">
-          <h6 className='p-4 mt-10 text-lg '>Product Review (33) </h6>
+          <h6 className='p-6 mt-10 text-lg '>Product Review (33) </h6>
      
-          <div className="p-4">
+          <div className="p-6">
             <select name="" id="" className='border-2 py-1 px-2 rounded-md'>
               <option value=""> Most Recent </option>
             </select>
           </div>
         </div>
         <hr />
-        <div className="grid grid-cols-3 m-4 space-x-4 ">
+        <div className="grid  grid-cols-1 lg:grid-cols-3 m-4 ">
           {
             reviewData.map((e,i)=>{
               return(
                 <>
- <div className="border-2 p-4 bg-[#FAFAFA]">
+ <div className="border-2 p-4 my-2 mx-2  bg-[#FAFAFA]">
+   <div className="img">
+    
+     <img src="" alt="" />
+   </div>
           <div className="flex  justify-between">
                 <p className='flex space-x-1'><FaStar className='lg:text-xl  text-sm text-orange-500'/>
                 <FaStar className='lg:text-xl  text-sm text-orange-500'/>
@@ -78,9 +165,13 @@ const Review =()=>{
             
                 <h1 className='text-lg font-bold mt-3'>{e.head}</h1>
                 <p className='text-base mt-3'>{e.para}</p>
-                <div className="flex items-center space-x-4 mt-5">
+                <div className="flex items-center mt-5">
+                  <div className="w-20">
                   <img src={r} alt="" className='w-12 h-12 rounded-full' />
-                  <h1 className='text-lg'>{e.name}</h1>
+                  </div>
+                <div className="w-full ">
+                <h1 className='lg:text-lg text-sm'>{e.name}</h1>
+                </div>
                 </div>
           </div>
                 </>
@@ -94,9 +185,7 @@ const Review =()=>{
         </div>
 
 
-{/* function classNames(...classes) {
-  return classes.filter(Boolean).join(" ")
-} */}
+
 
 
 

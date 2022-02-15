@@ -1,27 +1,28 @@
 import React from 'react';
 // import Breadcrumb from '../component/breadcrumb/Breadcrumb';
 import { FaAlignLeft } from 'react-icons/fa';
+
 const CommonCard=()=>{
     const commonData = [
         {
         
           head: "Anime",
-         
+         link:"/cart"
         },
         {
         
-            head: "Anime",
-           
+            head: "Formula1",
+            link:"/cart"
           },
           {
         
-            head: "Anime",
-           
+            head: "Stickers",
+            link:"/cart"
           },
           {
         
-            head: "Anime",
-           
+            head: "Motivational",
+            link:"/cart"
           },
     ]
   
@@ -49,7 +50,7 @@ const CommonCard=()=>{
 {/* <!-- Article --> */}
 <article className="overflow-hidden rounded-lg shadow-lg">
 
-    <a href="#">
+    <a href={e.link} >
         <img alt="Placeholder" className="block h-auto w-full" src="https://picsum.photos/600/400/?random"/>
     </a>
 

@@ -6,6 +6,9 @@ const Blog =()=>{
     return(
         <>
     <Breadcrumb heading="Blog"/>
+    <div className="container px-20 py-20">
+
+    </div>
         </>
     )
 }
