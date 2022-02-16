@@ -9,7 +9,7 @@ const ReviewForm=()=>{
               
                    <div className=""> <label htmlFor="name">Name </label></div>
                     <div className="mt-1">
-                    <input type="text" name="" id="" className='border-2 w-full py-4 px-4 bg-[#F2ECFF] rounded-md' placeholder='Enter Your Name' />
+                    <input type="text" name="" id="" className='border-2 w-full py-4 lg:px-4 bg-[#F2ECFF] rounded-md' placeholder='Enter Your Name' />
                 </div>
                 <div className="mt-5"> <label htmlFor="name">Email </label></div>
                     <div className="mt-1">

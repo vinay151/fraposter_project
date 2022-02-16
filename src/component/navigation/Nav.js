@@ -1,8 +1,20 @@
 import React,{useState,Fragment} from 'react';
 import { Transition, Menu } from "@headlessui/react"
+import '../home/banner.css';
 import {Link,useNavigate} from 'react-router-dom';
 import {FaUserCircle,FaSearch,FaShoppingCart, FaAngleDown} from 'react-icons/fa'
 const Nav =()=>{
+  // const [changeColor, setChangeColor]=useState(false);
+  // const changeNavbar=()=>{
+  //   if(window.scrollY >= 80){
+  //     setChangeColor(true);
+  //   }
+  //   else{
+  //     setChangeColor(false);
+  //   }
+  // };
+  // window.addEventListener('scroll', changeNavbar);
+
   const navigate=useNavigate();
   function userClick(event){
     event.preventDefault();
@@ -18,7 +30,7 @@ const Nav =()=>{
   return(
     <>
  < div>
-      <nav className="bg-white-800 shadow-lg">
+      <nav className="shadow-md bg-white ">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-7">
           <div className="flex items-center justify-between h-20">
             <div className="flex-shrink-0">
@@ -31,9 +43,9 @@ const Nav =()=>{
                 <Link
                   to="/"
                   activeClassName="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
-                  className={
-                    "hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black hover:font-medium px-3 py-2 rounded-md text-sm"
-                  }
+                  className=
+                    " hover:font-medium hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 px-3 rounded-md py-2 text-sm"
+
                 >
                   Home
                 </Link>
@@ -41,7 +53,7 @@ const Nav =()=>{
                 <Link
                   to="/about"
                   activeClassName="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
-                  className="hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black hover:font-medium px-3 py-2 rounded-md text-sm"
+                  className="hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 hover:text-black hover:font-medium px-3 py-2 rounded-md text-sm"
                 >
                   About Us
                 </Link>
@@ -64,7 +76,7 @@ const Nav =()=>{
                         // partiallyActive={true}
                         activeClassName="flex bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
                         className={
-                          "flex hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                          "flex hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
                         }
                       >
                         Poster
@@ -92,7 +104,7 @@ const Nav =()=>{
                             to="/anime"
                             activeClassName="flex bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
                             className={
-                              "flex hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                              "flex hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
                             }
                           >
                            Anime
@@ -103,7 +115,7 @@ const Nav =()=>{
                             to="/formula1"
                             activeClassName="flex bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
                             className={
-                              "flex hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                              "flex hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
                             }
                           >
                            Formula1
@@ -114,7 +126,7 @@ const Nav =()=>{
                             to="/formula1"
                             activeClassName="flex bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
                             className={
-                              "flex hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                              "flex hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
                             }
                           >
                             Formula1
@@ -125,7 +137,7 @@ const Nav =()=>{
                             to="/charposter"
                             activeClassName="flex bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
                             className={
-                              "flex hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                              "flex hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
                             }
                           >
                             Character Poster
@@ -140,7 +152,7 @@ const Nav =()=>{
                 <Link
                   to="/sticker"
                   activeClassName="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
-                  className="hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                  className="hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
                 >
                   Stickers
                 </Link>
@@ -148,14 +160,14 @@ const Nav =()=>{
                 <Link
                   to="/review"
                   activeClassName="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
-                  className="hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                  className="hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
                 >
                   Review
                 </Link>
                 <Link
                   to="/track"
                   activeClassName="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
-                  className="hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                  className="hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
                 >
                   Track Your Order
                 </Link>
@@ -163,7 +175,7 @@ const Nav =()=>{
                   to="/contact"
                   activeClassName="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
                   className={
-                    "hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                    "hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
                   }
                 >
                   Contact Us
@@ -206,7 +218,7 @@ const Nav =()=>{
 
 
             {/* mobile menu  */}
-            <div className="mr-20 flex md:hidden z-20">
+            <div className="mr-20 flex md:hidden  z-20">
             <div
                   className={
                     " flex space-x-1  px-3 py-2 "
@@ -222,7 +234,7 @@ const Nav =()=>{
               <button
                 onClick={() => setIsOpen(!isOpen)}
                 type="button"
-                className="bg-gradient-to-r from-slate-500 to-white-500 text-black inline-flex items-center justify-center p-2 rounded-md text-white-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
+                className="bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 text-black inline-flex items-center justify-center p-2 rounded-md text-white-400 hover:text-white hover:bg-gray-800 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-offset-gray-800 focus:ring-white"
                 aria-controls="mobile-menu"
                 aria-expanded="false"
               >
@@ -283,7 +295,7 @@ const Nav =()=>{
                 <Link
                   to="/"
                   activeClassName="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
-                  className="hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium  block px-3 py-2 rounded-md text-base"
+                  className="hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 hover:text-black  hover:font-medium  block px-3 py-2 rounded-md text-base"
                 >
                   Home
                 </Link>
@@ -291,7 +303,7 @@ const Nav =()=>{
                 <Link
                   to="/whoweare"
                   activeClassName="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
-                  className="hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium  block px-3 py-2 rounded-md text-base"
+                  className="hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 hover:text-black  hover:font-medium  block px-3 py-2 rounded-md text-base"
                 >
                   About Us
                 </Link>
@@ -312,7 +324,7 @@ const Nav =()=>{
                         // partiallyActive={true}
                         activeClassName="flex bg-gradient-to-r flex justify-between w-full from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
                         className={
-                          "flex justify-between w-full hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                          "flex justify-between w-full hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
                         }
                       >
                         Poster
@@ -340,7 +352,7 @@ const Nav =()=>{
                             to="/anime"
                             activeClassName="flex bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-3 rounded-md text-sm"
                             className={
-                              "flex hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-3 rounded-md text-sm"
+                              "flex hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 hover:text-black  hover:font-medium px-3 py-3 rounded-md text-sm"
                             }
                           >
                           Anime
@@ -351,7 +363,7 @@ const Nav =()=>{
                             to="/formula1"
                             activeClassName="flex bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
                             className={
-                              "flex hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                              "flex hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
                             }
                           >
                           Formula1
@@ -362,7 +374,7 @@ const Nav =()=>{
                             to="/poster"
                             activeClassName="flex bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
                             className={
-                              "flex hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                              "flex hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
                             }
                           >
                           Poster
@@ -373,7 +385,7 @@ const Nav =()=>{
                             to="/charposter"
                             activeClassName="flex bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
                             className={
-                              "flex hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
+                              "flex hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 hover:text-black  hover:font-medium px-3 py-2 rounded-md text-sm"
                             }
                           >
                            Charactrer Poster
@@ -387,28 +399,28 @@ const Nav =()=>{
                 <Link
                   to="/sticker"
                   activeClassName="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
-                  className="hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium  block px-3 py-2 rounded-md text-base"
+                  className="hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 hover:text-black  hover:font-medium  block px-3 py-2 rounded-md text-base"
                 >
                   Stickers
                 </Link>
                 <Link
                   to="/review"
                   activeClassName="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
-                  className="hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium  block px-3 py-2 rounded-md text-base"
+                  className="hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 hover:text-black  hover:font-medium  block px-3 py-2 rounded-md text-base"
                 >
                   Review
                 </Link>
                 <Link
                   to="/track"
                   activeClassName="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
-                  className="hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium  block px-3 py-2 rounded-md text-base"
+                  className="hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 hover:text-black  hover:font-medium  block px-3 py-2 rounded-md text-base"
                 >
                   Track your order
                 </Link>
                 <Link
                   to="/contact"
                   activeClassName="bg-gradient-to-r from-cyan-500 to-blue-500 text-white font-medium px-3 py-2 rounded-md text-sm"
-                  className="hover:bg-gradient-to-r from-slate-500 to-white-500 hover:text-black  hover:font-medium  block px-3 py-2 rounded-md text-base"
+                  className="hover:bg-gradient-to-r from-rose-400 via-fuchsia-500 to-indigo-500 hover:text-black  hover:font-medium  block px-3 py-2 rounded-md text-base"
                 >
                   Contact Us
                 </Link>

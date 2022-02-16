@@ -4,7 +4,7 @@ import './index.css';
 import 'tw-elements';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
-
+import "swiper/css/bundle";
 ReactDOM.render(
   <React.StrictMode>
     <App />

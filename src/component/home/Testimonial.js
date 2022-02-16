@@ -35,7 +35,7 @@ const Testimonial =()=>{
         <>
      <div className="container-fluid py-16 px-32 bg-gray-400">
       <div className="">
-          <div className="border-2 border-orange-500 lg:w-2/5 w-full flex items-center ">
+          <div className="border-2 border-orange-500 lg:w-5/12 w-full flex items-center ">
               <h1 className='bg-orange-500 w-36 text-white font-semibold px-6 py-3 text-2xl text-center'> REVIEW </h1>
           
             <div className="flex items-center">
@@ -44,7 +44,7 @@ const Testimonial =()=>{
                 <FaStar className='lg:text-xl lg:mx-1 ml-1 text-sm'/>
                 <FaStar className='lg:text-xl lg:mx-1 ml-1 text-sm'/>
                 <FaStar className='lg:text-xl lg:mx-1 ml-1 text-sm'/>
-                <p className='lg:text-xl text-lg ml-2'> from 38 review </p>
+                <p className='lg:text-xl text-lg lg:ml-2'> from 38 review </p>
                 </div> 
               
           </div>

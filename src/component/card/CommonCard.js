@@ -1,7 +1,7 @@
 import React from 'react';
 // import Breadcrumb from '../component/breadcrumb/Breadcrumb';
 import { FaAlignLeft } from 'react-icons/fa';
-
+import '../card/card.css';
 const CommonCard=()=>{
     const commonData = [
         {
@@ -51,7 +51,7 @@ const CommonCard=()=>{
 <article className="overflow-hidden rounded-lg shadow-lg">
 
     <a href={e.link} >
-        <img alt="Placeholder" className="block h-auto w-full" src="https://picsum.photos/600/400/?random"/>
+        <img alt="Placeholder" className="block h-auto w-full postercard" src="https://picsum.photos/600/400/?random"/>
     </a>
 
     <header className=" text-center leading-tight p-2 md:p-4">

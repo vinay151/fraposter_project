@@ -65,7 +65,7 @@ const PosterCard = () => {
                       src={e.pimage}
                     /> */}
                     <header className="text-center relative top-20 z-20">
-                      <h1 className="lg:text-2xl text-xl text-black font-bold mb-3">
+                      <h1 className="lg:text-2xl text-xl text-white font-bold mb-3">
                         {e.head}
                       </h1>
                       <Link

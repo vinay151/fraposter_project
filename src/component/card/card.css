@@ -1,5 +1,5 @@
 #poster-img{
-    background-image: url("../../svg/carousel.jpg");
+    background-image: url("../../svg/twostick.PNG");
     height: 270px;
     background-size: cover;
     background-position: center;
@@ -14,3 +14,7 @@
     opacity: 0.6;
     transition: 0.5s all ease-in-out;
 }
+.postercard:hover {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }

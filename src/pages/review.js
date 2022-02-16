@@ -116,8 +116,8 @@ const handleChange = (panel) => (event, newExpanded) => {
         <h1 className='mt-1 text-lg'>Based on 40 review</h1>
         </div>
         <div className="p-6">
-        <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')}>
-        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header" >
+        <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')} >
+        <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
       
           <button className='py-3 px-6 border-2' > Write Review </button>
         
@@ -134,7 +134,7 @@ const handleChange = (panel) => (event, newExpanded) => {
         <div>
      
         </div>
-        <div className="flex justify-between">
+        <div className="flex flex-wrap justify-between">
           <h6 className='p-6 mt-10 text-lg '>Product Review (33) </h6>
      
           <div className="p-6">
@@ -154,7 +154,7 @@ const handleChange = (panel) => (event, newExpanded) => {
     
      <img src="" alt="" />
    </div>
-          <div className="flex  justify-between">
+          <div className="flex flex-wrap justify-between">
                 <p className='flex space-x-1'><FaStar className='lg:text-xl  text-sm text-orange-500'/>
                 <FaStar className='lg:text-xl  text-sm text-orange-500'/>
                 <FaStar className='lg:text-xl  text-sm text-orange-500'/>
