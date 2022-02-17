@@ -12,6 +12,7 @@ import Register from "./pages/register";
 import Footer from './component/footer/Footer';
 import Blog from "./pages/blog";
 
+
 import Stickers from "./pages/stickers";
 import Anime from "./pages/anime";
 import Formula from "./pages/formula";

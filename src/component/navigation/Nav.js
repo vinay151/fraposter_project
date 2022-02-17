@@ -3,7 +3,9 @@ import { Transition, Menu } from "@headlessui/react"
 import '../home/banner.css';
 import {Link,useNavigate} from 'react-router-dom';
 import {FaUserCircle,FaSearch,FaShoppingCart, FaAngleDown} from 'react-icons/fa'
+import ModalCart from './ModalCart';
 const Nav =()=>{
+  const [openModal, setOpenModal]=useState(false);
   // const [changeColor, setChangeColor]=useState(false);
   // const changeNavbar=()=>{
   //   if(window.scrollY >= 80){
@@ -184,7 +186,7 @@ const Nav =()=>{
                   to="#"
                   
                   className={
-                    " flex space-x-3  px-3 py-2"
+                    " flex space-x-4  px-3 py-2"
                   }
                 >
                 <FaUserCircle className='text-2xl cursor-pointer' onClick={userClick}/>
@@ -209,13 +211,17 @@ const Nav =()=>{
     </div>
   </div>
 </div>
-                <FaShoppingCart className='text-2xl cursor-pointer' onClick={cartClick}/>
+                <Link to="#"> <FaShoppingCart className='text-2xl cursor-pointer' onClick={()=> {setOpenModal(true)}}/> </Link>
                 
                 <span className='text-red-500 relative -top-3 -left-6'> 0 </span>
-                </Link>
+               
+                </Link> 
+                <br/>
+                { openModal &&  <ModalCart closeModal={setOpenModal}/>}
               </div>
+              
             </div>
-
+          
 
             {/* mobile menu  */}
             <div className="mr-20 flex md:hidden  z-20">

@@ -23,7 +23,7 @@ const Cart = (props)=>{
              </div>
              <div className="flex items-center bg-gray-300 shadow-md rounded-md mt-3">
                  <button className='px-3 py-1 text-xl '  onClick={()=> setClick(click-1)}> - </button>
-                 <input type="text" className='px-2 w-full py-1 border-2 rounded-md border-purple-500 outline-none' value={click} />
+                 <input type="text" className='px-2 w-full py-1 text-center border-2 rounded-md border-purple-500 outline-none' value={click} />
                  <button className='px-3 py-1 text-xl ' onClick={()=> setClick(click+1)}> + </button>
              </div>
              <div className="mt-8">
