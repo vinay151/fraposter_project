@@ -1,6 +1,6 @@
 import React,{useState} from 'react';
 import { FaEnvelope, FaFacebook, FaFolder, FaHome,  FaPinterestP, FaShare, FaShoppingCart, FaTwitter, FaWhatsapp } from 'react-icons/fa';
-import { useNavigate } from 'react-router-dom';
+
 import onecart from '../../svg/stick.PNG';
 const Cart = (props)=>{
     const [click, setClick]= useState(1);

@@ -25,11 +25,8 @@ const Nav =()=>{
     event.preventDefault();
     navigate("/login")
   }
-  const click=useNavigate();
-  function cartClick(event){
-    event.preventDefault();
-    click("/cart")
-  }
+ 
+ 
   const [isOpen, setIsOpen] = useState(false)
   const [isUp, setIsUp] = useState(true)
   return(

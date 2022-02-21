@@ -100,7 +100,7 @@ const handleChange = (panel) => (event, newExpanded) => {
     return(
         <>
         <Breadcrumb heading="Review"/>
-        <div className="container-fluid py-20 px-32">
+        <div className="container-fluid py-20 px-32" data-aos="zoom-in-up">
         <h1 className='text-4xl font-extrabold'>REVIEW</h1>
         <div className="border-2 mt-5 ">
           <div className="">

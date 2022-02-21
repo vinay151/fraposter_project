@@ -24,7 +24,9 @@ import cartCounter from './component/navigation/countContext'
 import Dashboard from "./admin/dashboard/Dashboard";
 import Checkout from "./pages/cart/checkout";
 
-
+import AOS from "aos";
+import "aos/dist/aos.css";
+AOS.init();
 
 function App() {
 

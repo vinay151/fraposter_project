@@ -3,29 +3,11 @@ import one from "../../svg/one-image.webp";
 // import tick from '../warranty.png';
 import '../card/card.css';
 import { Link } from "react-router-dom";
-import { motion } from "framer-motion";
+
 const PosterCard = () => {
  
 
-const container = {
-  hidden: { opacity: 1, scale: 0 },
-  visible: {
-    opacity: 1,
-    scale: 1,
-    transition: {
-      delayChildren: 0.3,
-      staggerChildren: 0.2
-    }
-  }
-};
 
-const item = {
-  hidden: { y: 20, opacity: 0 },
-  visible: {
-    y: 0,
-    opacity: 1
-  }
-};
   const posterData = [
     {
       pimage: one,
@@ -74,11 +56,9 @@ const item = {
           {posterData.map((e, i) => {
             return (
               <>
-                <motion.div
-            
-                    variants={container}
-                    initial="hidden"
-                    animate="visible"
+                <div
+              data-aos="zoom-in-down"
+                  
                   className=" container w-full md:w-1/2 lg:my-4 my-2 lg:px-4 lg:w-1/3  "
                   key={i}
                 >
@@ -105,7 +85,7 @@ const item = {
                   </div>
 
                   {/* <!-- END Article --> */}
-                </motion.div>
+                </div>
               </>
             );
           })}
