@@ -21,7 +21,7 @@ const BlogHome =()=>{
                   <p className='lg:mt-3  lg:text-xl lg:ml-6 mt-4 ml-0 text-lg'> Many Of us different fraposter ideas. You need something outlining,yet don't 
                       have the idea where ... </p>
                 <div className="mt-10 lg:ml-6 ml-0">
-                <Link to="/blog" className='lg:px-6 lg:py-4 px-3 py-3 rounded-md bg-black ' onClick={blogClick}> Read More  </Link>
+                <Link to="/blog" className='lg:px-6 hover:px-10 lg:py-4 px-3 py-3 rounded-md bg-black ' onClick={blogClick}> Read More  </Link>
                 </div>
               </div>
             

@@ -1,39 +1,67 @@
 import React from 'react';
-import {FaStar,FaQuoteLeft,FaQuoteRight} from 'react-icons/fa';
+import {FaStar} from 'react-icons/fa';
 import Slider from "react-slick";
-import test from '../../svg/stick.PNG';
+
+import PreviousBtn from "./PreviousBtn";
+import NextBtn from "./NextBtn";
+import data from './data';
+import { ArrowBackIos, ArrowForwardIos } from "@material-ui/icons";
+
 import './banner.css';
+import TestCard from './TestCard';
 // import tick from '../warranty.png';
+function cards(data) {
+  return (
+    <TestCard
+      key={data.id}
+      avatar={data.avatar}
+      name={data.name}
+      message={data.message}
+      designation={data.designation}
+      location={data.location}
+    />
+  );
+}
 const Testimonial =()=>{
-  const testData=[
-    {
-      testimg:test,
-      para:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quod natus laboriosam reprehenderit ex sed maxime molestias nobis ullam doloribus!",
-      head:"Alex Smith"
-    },
-    {
-      testimg:test,
-      para:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quod natus laboriosam reprehenderit ex sed maxime molestias nobis ullam doloribus!",
-      head:"Jhon Smith"
-    },
-    {
-      testimg:test,
-      para:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quod natus laboriosam reprehenderit ex sed maxime molestias nobis ullam doloribus!",
-      head:"Derren"
-    },
-  ]
+  // const testData=[
+  //   {
+  //     testimg:test,
+  //     para:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quod natus laboriosam reprehenderit ex sed maxime molestias nobis ullam doloribus!",
+  //     head:"Alex Smith"
+  //   },
+  //   {
+  //     testimg:test,
+  //     para:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quod natus laboriosam reprehenderit ex sed maxime molestias nobis ullam doloribus!",
+  //     head:"Jhon Smith"
+  //   },
+  //   {
+  //     testimg:test,
+  //     para:" Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quod natus laboriosam reprehenderit ex sed maxime molestias nobis ullam doloribus!",
+  //     head:"Derren"
+  //   },
+  // ]
   const settings = {
     dots: true,
+    fade: true,
+    autoplay: true,
     infinite: true,
     speed: 500,
-   autoPlay:true,
-   autoplaySpeed: 500,
+    autoplaySpeed: 5000,
     slidesToShow: 1,
-    slidesToScroll: 1
+    slidesToScroll: 1,
+    nextArrow: <NextBtn icon={ArrowForwardIos} />,
+    prevArrow: <PreviousBtn icon={ArrowBackIos} />,
+    appendDots: (dots) => <ul>{dots}</ul>,
+    customPaging: (i) => (
+      <div className="ft-slick__dots--custom">
+        <div className="loading" />
+      </div>
+    )
   };
+
     return(
         <>
-     <div className="container-fluid py-16 px-32 bg-gray-400">
+     <div className="container-fluid py-16 px-32 bg-gray-200">
       <div className="">
           <div className="border-2 border-orange-500 lg:w-5/12 w-full flex items-center ">
               <h1 className='bg-orange-500 w-36 text-white font-semibold px-6 py-3 text-2xl text-center'> REVIEW </h1>
@@ -48,7 +76,13 @@ const Testimonial =()=>{
                 </div> 
               
           </div>
-         
+          <div className="testimonial">
+      <div style={{ width: "70%" }}>
+        
+        <Slider {...settings}>{data.map(cards)}</Slider>
+      </div>
+    </div>
+{/*          
           <div className="grid grid-cols-1 items-center justify-items-center mt-10">
           <Slider {...settings} className=" lg:w-4/5 w-full">
          {
@@ -83,7 +117,7 @@ const Testimonial =()=>{
              
               
               </Slider>
-          </div>
+          </div> */}
          
         
           {/* <div className="">

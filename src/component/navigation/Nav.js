@@ -4,8 +4,11 @@ import '../home/banner.css';
 import {Link,useNavigate} from 'react-router-dom';
 import {FaUserCircle,FaSearch,FaShoppingCart, FaAngleDown} from 'react-icons/fa'
 import ModalCart from './ModalCart';
+import cartCounter from '../navigation/countContext';
+
 const Nav =()=>{
   const [openModal, setOpenModal]=useState(false);
+  const context = React.useContext(cartCounter)
   // const [changeColor, setChangeColor]=useState(false);
   // const changeNavbar=()=>{
   //   if(window.scrollY >= 80){
@@ -213,7 +216,7 @@ const Nav =()=>{
 </div>
                 <Link to="#"> <FaShoppingCart className='text-2xl cursor-pointer' onClick={()=> {setOpenModal(true)}}/> </Link>
                 
-                <span className='text-red-500 relative -top-3 -left-6'> 0 </span>
+                <span className='text-red-500 relative -top-3 -left-6'> {context.state.count}</span>
                
                 </Link> 
                 <br/>

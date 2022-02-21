@@ -1,4 +1,4 @@
-import React from "react";
+import React, {createContext} from "react";
 // import Nav from './component/navigation/Nav';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import About from "./pages/about";
@@ -20,14 +20,28 @@ import CharPoster from "./pages/charPoster";
 import Track from "./pages/track";
 import Cart from './pages/cart/cart';
 import ReviewForm from "./pages/reviewForm";
-
+import cartCounter from './component/navigation/countContext'
 import Dashboard from "./admin/dashboard/Dashboard";
-// import stickerCart from "./pages/cart/stickerCart";
+import Checkout from "./pages/cart/checkout";
+
 
 
 function App() {
+
+
+function cartCounterReducer(state, action){
+    switch(action.type){
+        case 'increment' :
+            return {count: state.count + 1}
+        case 'decrement' : 
+             return {count: state.count - 1}
+        default : return state;
+    }
+}
+const [state, dispatch] = React.useReducer(cartCounterReducer, {count: 0})
+// import stickerCart from "./pages/cart/stickerCart";
   return (
-   
+   <cartCounter.Provider value = {{state, dispatch}}>
     <>
     <BrowserRouter>
     <Nav/>
@@ -48,6 +62,7 @@ function App() {
       <Route exact path="/formula1" element={ <Formula/> }/>
       <Route exact path="/charposter" element={ <CharPoster/> }/>
       <Route exact path="/cart" element={ <Cart/> }/>
+      <Route exact path="/check" element={ <Checkout/> }/>
      
     
       <Route exact path="/dashboard" element={ <Dashboard/> }/>
@@ -61,7 +76,7 @@ function App() {
     
   
     </>
+    </cartCounter.Provider>
   );
 }
-
 export default App;
