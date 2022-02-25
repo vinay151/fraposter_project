@@ -9,7 +9,7 @@ function TestCard(props) {
           className="avatar"
           src={props.avatar}
         />
-        <p style={{ marginTop: 25 }}>
+        <p style={{ marginTop: 25, fontSize:"1.5rem" }}>
           <span>&ldquo;</span>
           {props.message}
         </p>

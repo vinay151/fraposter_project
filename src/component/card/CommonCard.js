@@ -30,8 +30,8 @@ const CommonCard=()=>{
         <>
      <div className="container my-12 mx-auto px-4 md:px-12">
             <div className=" flex w-2/4  mx-auto items-center justify-center space-x-1">
-            <FaAlignLeft className='cursor-pointer'/>  <h1 className="text-lg "> Sort By</h1>
-                <select name="" id="" className="ml-2 w-60 py-3 border-2 cursor-pointer outline-none rounded-lg border-purple-500">
+            <FaAlignLeft className='cursor-pointer text-3xl'/>  <h1 className="text-3xl "> Sort By</h1>
+                <select name="" id="" className="ml-2 text-xl w-60 py-3 border-2 cursor-pointer outline-none rounded-lg border-purple-500">
                     <option value="Featured"> Fetured </option>
                     <option value="Best Selling"> BestSelling </option>
                     <option value="Best Selling"> Price Low To High </option>

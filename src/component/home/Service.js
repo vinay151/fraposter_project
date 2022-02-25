@@ -23,7 +23,7 @@ const serviceData=[
 const Service =()=>{
     return(
         <>
-         <div className="container py-12 px-20">
+         <div className="container py-12 px-32">
              <div className="flex flex-wrap -mx-1 lg:-mx-4">
                  {
                      serviceData.map((e,i)=>{
@@ -35,12 +35,12 @@ const Service =()=>{
     
 
     <header class="text-center mt-4">
-        <h1 class="text-2xl font-semibold">
+        <h1 class="text-3xl font-semibold">
             
     {e.head}
             
         </h1>
-       <p className='mt-2'>{e.para}</p>
+       <p className='mt-2 text-2xl'>{e.para}</p>
     </header>
     </article>
                       </div>

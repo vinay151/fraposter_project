@@ -1,7 +1,7 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
 
-
+// import '../home/banner.css';
 // import { baseUrl } from "./config";
 import one from '../../svg/one-image.webp';
 
@@ -33,13 +33,35 @@ const Banner =()=>{
     //   };
     return(
         <>
-    
+    {/* <div className="banner mt-32">
+      <input type="radio" name="buttons" id="r1" checked/>
+      <input type="radio" name="buttons" id="r2" />
+      <input type="radio" name="buttons" id="r3" />
+      <input type="radio" name="buttons" id="r4" />
+      <input type="radio" name="buttons" id="r5" />
+     <div className="side">
+       <div className="">1</div>
+       <div className=""></div>
+       <div className=""></div>
+       <div className=""></div>
+       <div className=""></div>
+     </div>
+     <div className="controls">
+       <label htmlFor="r1"></label>
+       <label htmlFor="r2"></label>
+       <label htmlFor="r3"></label>
+       <label htmlFor="r4"></label>
+       <label htmlFor="r5"></label>
+       <i className='fas fa-arrow-left'></i>
+       <i className='fas fa-arrow-right'></i>
+     </div>
+    </div> */}
     <div
   id="carouselDarkVariant"
   className="carousel slide carousel-fade carousel-dark relative  bg-[#555354] z-10 opacity-100"
   data-bs-ride="carousel"
 >
-  {/* <!-- Indicators --> */}
+ 
   <div className="carousel-indicators absolute right-0 bottom-0 left-0 flex justify-center p-0 mb-4">
     <button
       data-bs-target="#carouselDarkVariant"
@@ -60,44 +82,43 @@ const Banner =()=>{
     ></button>
   </div>
 
-  {/* <!-- Inner --> */}
+
   <div className="carousel-inner relative w-full overflow-hidden">
-    {/* <!-- Single item --> */}
+
     <div className="carousel-item active relative float-left w-full">
       <img
         src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(19).webp"
         className="block w-full opacity-40"
         alt="Motorbike Smoke"
       />
-      <div data-aos="fade-down" className="carousel-caption hidden md:block absolute text-center lg:bottom-40 sm:bottom-0 md:bottom-0">
-        <h5 className="text-xl mb-10 text-white"> Poster and Design from the Pinccale of Formula1 </h5>
-        <button className='px-10 py-3  text-white text-2xl hover:bg-orange-400 hover:text-black rounded-md cursor-pointer border-2 border-orange-400' onClick={formulaClick}> View All </button>
+      <div data-aos="fade-down" className="carousel-caption hidden md:block absolute text-center lg:bottom-60 sm:bottom-0 md:bottom-0">
+        <h5 className="text-4xl mb-10 text-white"> Poster and Design from the Pinccale of Formula1 </h5>
+        <button className='px-10 py-3  text-white text-3xl hover:bg-orange-400 hover:text-black rounded-md cursor-pointer border-2 border-orange-400' onClick={formulaClick}> View All </button>
       </div>
     </div>
 
-    {/* <!-- Single item --> */}
     <div className="carousel-item relative float-left w-full">
       <img
         src="https://mdbcdn.b-cdn.net/img/Photos/Slides/img%20(35).webp"
         className="block w-full opacity-40"
         alt="Mountaintop"
       />
-       <div data-aos="fade-down" className="carousel-caption hidden md:block absolute text-center lg:bottom-40 sm:bottom-0 md:bottom-0">
-        <h5 className="text-xl mb-10 text-white"> Character Poster </h5>
-        <button className='px-10 py-3  text-white text-2xl hover:bg-orange-400 hover:text-black rounded-md cursor-pointer border-2 border-orange-400' onClick={charClick} > View All </button>
+       <div data-aos="fade-down" className="carousel-caption hidden md:block absolute text-center lg:bottom-60 sm:bottom-0 md:bottom-0">
+        <h5 className="text-4xl mb-10 text-white"> Character Poster </h5>
+        <button className='px-10 py-3  text-white text-3xl hover:bg-orange-400 hover:text-black rounded-md cursor-pointer border-2 border-orange-400' onClick={charClick} > View All </button>
       </div>
     </div>
 
-    {/* <!-- Single item --> */}
+  
     <div className="carousel-item relative float-left w-full">
       <img
         src={one}
         className="block w-full opacity-40 bg-no-repeat object-center"
         alt="Woman Reading a Book"
       />
-       <div data-aos="fade-down" className="carousel-caption hidden md:block absolute text-center lg:bottom-40 sm:bottom-0 md:bottom-0">
-        <h5 className="text-xl mb-10 text-white"> Check Out our Favourite Anime Collection  </h5>
-        <button className='px-10 py-3  text-white text-2xl hover:bg-orange-400 hover:text-black rounded-md cursor-pointer border-2 border-orange-400' onClick={animeClick}> Shop Now </button>
+       <div data-aos="fade-down" className="carousel-caption hidden md:block absolute text-center lg:bottom-60 sm:bottom-0 md:bottom-0">
+        <h5 className="text-4xl mb-10 text-white"> Check Out our Favourite Anime Collection  </h5>
+        <button className='px-10 py-3  text-white text-3xl hover:bg-orange-400 hover:text-black rounded-md cursor-pointer border-2 border-orange-400' onClick={animeClick}> Shop Now </button>
       </div>
     </div>
   </div>

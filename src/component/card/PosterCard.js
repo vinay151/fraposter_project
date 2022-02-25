@@ -37,7 +37,7 @@ const PosterCard = () => {
       pimage: one,
       head: "Motorsport",
       btn: "Shop Now",
-      link:"motor"
+      link:"/motor"
     },
     {
       pimage: one,
@@ -48,8 +48,8 @@ const PosterCard = () => {
   ];
   return (
     <>
-      <div className="container my-12 mx-auto px-24 ">
-        <h1 className="text-center text-3xl py-5 font-semibold">
+      <div className="container my-12 mx-auto px-36 ">
+        <h1 className="text-center text-5xl py-5 font-semibold">
           Frame Collection
         </h1>
         <div className="flex flex-wrap -mx-1 lg:-mx-4">
@@ -71,12 +71,12 @@ const PosterCard = () => {
                       src={e.pimage}
                     /> */}
                     <header className="text-center relative top-20 z-20">
-                      <h1 className="lg:text-2xl text-xl text-white font-bold mb-3">
+                      <h1 className="lg:text-4xl text-2xl text-white font-bold mb-8">
                         {e.head}
                       </h1>
                       <Link
                         to={e.link}
-                        className="lg:px-4 lg:py-3 px-2 py-2  text-white bg-orange-500 cursor-pointer rounded-lg"
+                        className="lg:px-4 text-xl lg:py-3 px-2 py-2  text-white bg-orange-500 cursor-pointer rounded-lg"
                       >
                         {" "}
                         Shop Now{" "}

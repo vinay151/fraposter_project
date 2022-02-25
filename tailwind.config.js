@@ -8,9 +8,7 @@ module.exports = {
       center: true
     },
 
-    fontFamily: {
-      sans: 'Poppins',
-    },
+   
     extend: {
       colors:
       {

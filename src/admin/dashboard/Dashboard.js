@@ -7,10 +7,10 @@ import {Home,Category,Phonelink,Settings,ShoppingCart,PowerSettingsNew} from '@m
 const Dashboard=()=>{
     return(
         <>
-     <div className="container-fluid">
+     <div className="container-fluid mt-32 ">
        <nav className='h-20 px-10 bg-blue-600 flex items-center sticky top-0 left-0 z-20'>
            <div className="">
-               <h1 className='text-2xl font-bold'>Fraposter</h1>
+               <h1 className='text-4xl font-bold'>Fraposter</h1>
            </div>
        </nav>
       <div className="flex space-x-4">
@@ -18,8 +18,8 @@ const Dashboard=()=>{
         <ul className='bg-white shadow-xl px-5 '>
         <List>
       
-              <ListItem button>
-              <ListItemIcon>
+              <ListItem button >
+              <ListItemIcon style={{fontSize:"50px"}}>
                   <Home/>
               </ListItemIcon>
                 <ListItemText primary="Home" />
@@ -57,7 +57,7 @@ const Dashboard=()=>{
           </List>
         </ul>
        </div>
-       <div className="">
+       <div className="text-2xl">
            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, nihil?</p>
        </div>
       </div>

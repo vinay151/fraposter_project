@@ -11,8 +11,7 @@
     opacity: 0.9;
 }
 #poster-img:hover{
-    opacity: 0.6;
-    transition: 0.5s all ease-in-out;
+    transform: scale(1.1);
 }
 .postercard:hover {
     -webkit-transform: scaleX(-1);

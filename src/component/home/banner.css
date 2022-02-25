@@ -1,6 +1,120 @@
 @import "~slick-carousel/slick/slick.css"; 
 @import "~slick-carousel/slick/slick-theme.css";
 
+/* banner card  */
+/* .banner{
+  width: 100vw;
+  height: 700px;
+  position: relative;
+  z-index: 10;
+}
+.banner input{
+  display: none;
+}
+.controls{
+  width: 100%;
+  position: absolute;
+  top: 300px;
+}
+.controls > label{
+ 
+  height: 50px;
+  width: 50px;
+  background-color: purple;
+  cursor: pointer;
+  border-radius: 50%;
+}
+.fa-arrow-left, .fa-arrow-right{
+  font-size: 20px;
+  color: white;
+  cursor: pointer;
+  line-height: 50px;
+  text-align: center;
+  margin-left: -33px;
+}
+.fa-arrow-right{
+float: right;
+margin-right: -35px;
+}
+#r1:checked ~ .side > div:nth-child(1){
+  margin-left: 0%;
+}
+#r2:checked ~ .side > div:nth-child(1){
+  margin-left: -25%;
+}
+#r3:checked ~ .side > div:nth-child(1){
+  margin-left: -100%;
+}
+#r4:checked ~ .side > div:nth-child(1){
+  margin-left: -200%;
+}
+#r5:checked ~ .side > div:nth-child(1){
+  margin-left: -400%;
+}
+#r1:checked ~ .controls > label:nth-child(2),
+#r2:checked ~ .controls > label:nth-child(3),
+#r3:checked ~ .controls > label:nth-child(4),
+#r4:checked ~ .controls > label:nth-child(5),
+#r5:checked ~ .controls > label:nth-child(1){
+  display: block;
+  float: right;
+  margin: 0 30px 0 0;
+}
+#r1:checked ~ .controls > label:nth-child(5),
+#r2:checked ~ .controls > label:nth-child(1),
+#r3:checked ~ .controls > label:nth-child(2),
+#r4:checked ~ .controls > label:nth-child(3),
+#r5:checked ~ .controls > label:nth-child(4){
+  display: block;
+  float: left;
+  margin: 0 0 0 15px;
+}
+.banner .side{
+  height: 100%;
+  width: 500%;
+  display: flex;
+}
+.banner .side > div{
+  height: 100%;
+  width: 100%;
+  transition: 1s ;
+
+}
+.banner .side > div:nth-child(1){
+background-image: url('../../svg/stick.PNG');
+background-repeat: no-repeat;
+background-position: center;
+background-size: cover;
+background-attachment: fixed;
+}
+.banner .side > div:nth-child(2){
+  background-image: url('../../svg/twostick.PNG');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+  }
+  .banner .side > div:nth-child(3){
+    background-image: url('../../svg/carousel.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    background-attachment: fixed;
+    }
+    .banner .side > div:nth-child(4){
+      background-image: url('../../svg/one-image.webp');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      background-attachment: fixed;
+      }
+      .banner .side > div:nth-child(5){
+        background-image: url('../../svg/blog2.jpg');
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        background-attachment: fixed;
+        } */
 
 /* owl carousel style */
 .owl-dots .owl-dot {
@@ -22,73 +136,34 @@
   color: #000000;
 }
 /* testimonial design */
-
-.testimonial .slick-arrow.slick-prev,
-.testimonial .slick-arrow.slick-next {
-  height: 40px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 1;
-  border-radius: 50%;
+.test{
+  border-right: 4px solid #2A3D7D;
+  /* box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px 30px 30px 130px;
+  margin: 0 15px 30px 15px; */
+  overflow: hidden;
+  position: relative;
+ 
 }
-
-.testimonial {
-  display: flex;
-  justify-content: center;
-  background: antiquewhite;
-  width: 100%;
-  padding: 60px;
-  margin: 50px auto;
-  border-radius: 50px;
-  min-width: 80%;
+.test:before{
+  content: "";
+  position: absolute;
+  bottom: -4px;
+  left: -17px;
+  border-top: 25px solid #29D18B;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  transform: rotate(45deg);
 }
-.main {
-  padding: 20px 60px;
-}
-
-/* Cards */
-
-.Client-Card {
-  color: gray !important;
-  align-items: center !important;
-  flex-direction: column !important;
-  text-align: center !important;
-}
-.avatar {
-  width: 120px !important;
-  height: 120px !important;
-  border: 3px solid #994d47;
-  padding: 3px;
-}
-.Name {
-  font-size: 20px;
-  font-weight: bolder;
-  color: #994d47;
-}
-.heading {
-  text-align: center;
-  font-family: "Roboto";
-  color: #994d47;
-  font-size: 40px;
-}
-.designation {
-  color: #994d47;
-  font-size: 15px;
-  font-style: italic;
-  font-weight: 600;
-}
-
-/* Slick Slider  */
-.slick-prev::before,
-.slick-next::before {
-  display: none;
-}
-.slick-slider {
-  padding: 25px !important;
-  border-radius: 50px !important;
-  box-shadow: 1px 3px 21px 9px rosybrown !important;
-  min-width: auto;
+.test:after{
+  content: "";
+  position: absolute;
+  top: -4px;
+  left: -17px;
+  border-top: 25px solid #29D18B;
+  border-left: 25px solid transparent;
+  border-right: 25px solid transparent;
+  transform: rotate(135deg);
 }
 
 /* Customization of Slider Navigations*/

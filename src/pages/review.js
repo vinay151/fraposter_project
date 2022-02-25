@@ -100,26 +100,26 @@ const handleChange = (panel) => (event, newExpanded) => {
     return(
         <>
         <Breadcrumb heading="Review"/>
-        <div className="container-fluid py-20 px-32" data-aos="zoom-in-up">
-        <h1 className='text-4xl font-extrabold'>REVIEW</h1>
+        <div className="container-fluid py-20 lg:px-48 px-6" data-aos="zoom-in-up">
+        <h1 className='text-6xl font-extrabold'>REVIEW</h1>
         <div className="border-2 mt-5 ">
           <div className="">
-        <div className="p-6">
+        <div className="p-6 flex items-center space-x-4">
         <div className="flex space-x-1">
-                <FaStar className='lg:text-xl  text-sm text-orange-500'/>
-                <FaStar className='lg:text-xl  text-sm text-orange-500'/>
-                <FaStar className='lg:text-xl  text-sm text-orange-500'/>
-                <FaStar className='lg:text-xl  text-sm text-orange-500'/>
-                <FaStar className='lg:text-xl  text-sm text-orange-500'/>
+                <FaStar className='lg:text-3xl  text-xl text-orange-500'/>
+                <FaStar className='lg:text-3xl  text-xl text-orange-500'/>
+                <FaStar className='lg:text-3xl  text-xl text-orange-500'/>
+                <FaStar className='lg:text-3xl  text-xl text-orange-500'/>
+                <FaStar className='lg:text-3xl  text-xl text-orange-500'/>
              
                 </div> 
-        <h1 className='mt-1 text-lg'>Based on 40 review</h1>
+        <h1 className='mt-1 text-3xl'>Based on 40 review</h1>
         </div>
         <div className="p-6">
         <Accordion square expanded={expanded === 'panel1'} onChange={handleChange('panel1')} >
         <AccordionSummary aria-controls="panel1d-content" id="panel1d-header">
       
-          <button className='py-3 px-6 border-2' > Write Review </button>
+          <button className='py-4 px-6 border-2 text-3xl' > Write Review </button>
         
     
         </AccordionSummary>
@@ -135,10 +135,10 @@ const handleChange = (panel) => (event, newExpanded) => {
      
         </div>
         <div className="flex flex-wrap justify-between">
-          <h6 className='p-6 mt-10 text-lg '>Product Review (33) </h6>
+          <h6 className='p-6 mt-10 text-3xl '>Product Review (33) </h6>
      
           <div className="p-6">
-            <select name="" id="" className='border-2 py-1 px-2 rounded-md'>
+            <select name="" id="" className='border-2 py-2 text-3xl px-2 rounded-md'>
               <option value=""> Most Recent </option>
             </select>
           </div>
@@ -155,22 +155,22 @@ const handleChange = (panel) => (event, newExpanded) => {
      <img src="" alt="" />
    </div>
           <div className="flex flex-wrap justify-between">
-                <p className='flex space-x-1'><FaStar className='lg:text-xl  text-sm text-orange-500'/>
-                <FaStar className='lg:text-xl  text-sm text-orange-500'/>
-                <FaStar className='lg:text-xl  text-sm text-orange-500'/>
-                <FaStar className='lg:text-xl  text-sm text-orange-500'/>
-                <FaStar className='lg:text-xl  text-sm '/></p>
-                <p>{e.subhead}</p>
+                <p className='flex space-x-1'><FaStar className='lg:text-3xl  text-xl text-orange-500'/>
+                <FaStar className='lg:text-3xl  text-xl text-orange-500'/>
+                <FaStar className='lg:text-3xl  text-xl text-orange-500'/>
+                <FaStar className='lg:text-3xl  text-xl text-orange-500'/>
+                <FaStar className='lg:text-3xl  text-xl '/></p>
+                <p className='text-2xl'>{e.subhead}</p>
                 </div> 
             
-                <h1 className='text-lg font-bold mt-3'>{e.head}</h1>
-                <p className='text-base mt-3'>{e.para}</p>
+                <h1 className='text-3xl font-bold mt-3'>{e.head}</h1>
+                <p className='text-2xl mt-3'>{e.para}</p>
                 <div className="flex items-center mt-5">
                   <div className="w-20">
                   <img src={r} alt="" className='w-12 h-12 rounded-full' />
                   </div>
                 <div className="w-full ">
-                <h1 className='lg:text-lg text-sm'>{e.name}</h1>
+                <h1 className='lg:text-3xl text-xl'>{e.name}</h1>
                 </div>
                 </div>
           </div>
