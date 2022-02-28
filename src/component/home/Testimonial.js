@@ -47,8 +47,8 @@ const Testimonial=()=>{
   ]
   return(
     <>
-    <div className="container py-20 px-32">
-    <h1 className='text-5xl text-center font-bold'>Our Customer Say </h1>
+    <div className="container py-24 px-32">
+    <h1 className='text-6xl text-center font-bold'>Our Customer Say </h1>
     <div className="lg:w-3/4 w-full mx-auto mt-10 ">
     <Slider {...settings}>
       {
@@ -56,7 +56,7 @@ const Testimonial=()=>{
           return(
             <>
        <div className="bg-white shadow-inner  py-20 px-10 border test">
-       <div className="flex flex-wrap space-x-10">
+       <div className="flex lg:flex-nowrap flex-wrap space-x-10">
          <img src={a} alt="" className='w-40 h-40 lg:m-0 mx-auto rounded-full' />
          <div className="mt-2">
          <p className='text-3xl'> 

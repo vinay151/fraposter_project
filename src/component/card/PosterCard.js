@@ -48,8 +48,8 @@ const PosterCard = () => {
   ];
   return (
     <>
-      <div className="container my-12 mx-auto px-36 ">
-        <h1 className="text-center text-5xl py-5 font-semibold">
+      <div className="container my-20 mx-auto lg:px-36 px-20 ">
+        <h1 className="text-center text-6xl py-5 font-semibold">
           Frame Collection
         </h1>
         <div className="flex flex-wrap -mx-1 lg:-mx-4">
@@ -70,13 +70,13 @@ const PosterCard = () => {
                       className="block h-auto w-full rounded-lg cursor-pointer transform transition duration-500 hover:scale-110 hover:opacity-60 opacity-95"
                       src={e.pimage}
                     /> */}
-                    <header className="text-center relative top-20 z-20">
+                    <header className="text-center relative top-32 z-20">
                       <h1 className="lg:text-4xl text-2xl text-white font-bold mb-8">
                         {e.head}
                       </h1>
                       <Link
                         to={e.link}
-                        className="lg:px-4 text-xl lg:py-3 px-2 py-2  text-white bg-orange-500 cursor-pointer rounded-lg"
+                        className="px-6  text-2xl py-5 text-white bg-orange-500 cursor-pointer rounded-lg"
                       >
                         {" "}
                         Shop Now{" "}

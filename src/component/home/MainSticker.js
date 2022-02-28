@@ -50,7 +50,7 @@ const MainSticker=()=>{
         <>
         <div className="container py-16 text-center px-36">
          <div className="">
-             <h1 className='text-5xl font-bold'>Introducing Stickers</h1>
+             <h1 className='text-6xl font-bold'>Introducing Stickers</h1>
              <p className='py-4 text-3xl '> Shopping Your Favourite BMW, Motorsports and Anime Stickers </p>
          </div>
        
@@ -151,7 +151,7 @@ const MainSticker=()=>{
        
       </div>
       <div className="py-20">
-<button className='px-10 py-3  text-black text-3xl hover:bg-orange-400  rounded-md cursor-pointer border-2 border-orange-400'> View All </button>
+<button className='px-10 py-5  text-black text-3xl hover:bg-orange-400  rounded-md cursor-pointer border-2 border-orange-400'> View All </button>
 
 </div>
 

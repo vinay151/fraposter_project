@@ -56,6 +56,7 @@ const Login =()=>{
 
                 {/* <!-- Auth Buttton --> */}
                 <Link type="submit" to="/dashboard"
+     
                     className="w-full py-3 mt-10 bg-gray-800  text-center
                     font-medium text-white uppercase
                     rounded-md

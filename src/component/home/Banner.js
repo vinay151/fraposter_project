@@ -1,10 +1,30 @@
 import React from 'react';
 import { useNavigate } from 'react-router-dom';
-
-// import '../home/banner.css';
+import Slider from "react-slick";
+import '../home/banner.css';
 // import { baseUrl } from "./config";
 import one from '../../svg/one-image.webp';
+function SampleNextArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "red",position:"absolute",right:"130px",padding:"10px", borderRadius:"50%", height:"40px" ,width:"40px" }}
+      onClick={onClick}
+    />
+  );
+}
 
+function SamplePrevArrow(props) {
+  const { className, style, onClick } = props;
+  return (
+    <div
+      className={className}
+      style={{ ...style, display: "block", background: "green", position:"absolute",left:"130px",padding:"10px", borderRadius:"50%", height:"40px" ,width:"40px" ,zIndex:"100" }}
+      onClick={onClick}
+    />
+  );
+}
 const Banner =()=>{
 
   const navigate = useNavigate();
@@ -22,41 +42,23 @@ const Banner =()=>{
     event.preventDefault();
     anime("/anime")
   }
-    // const settings = {
-    //     dots: true,
-    //     fade: true,
-    //     autoPlay:true,
-    //     infinite: true,
-    //     speed: 500,
-    //     slidesToShow: 1,
-    //     slidesToScroll: 1
-    //   };
+  const settings = {
+    dots: true,
+      fade: true,
+    autoplay:true,
+    autoplaySpeed: 2000,
+    infinite: true,
+    speed: 2000,
+    slidesToShow: 1,
+    slidesToScroll: 1,
+    nextArrow: <SampleNextArrow />,
+    prevArrow: <SamplePrevArrow />,
+  };
     return(
         <>
-    {/* <div className="banner mt-32">
-      <input type="radio" name="buttons" id="r1" checked/>
-      <input type="radio" name="buttons" id="r2" />
-      <input type="radio" name="buttons" id="r3" />
-      <input type="radio" name="buttons" id="r4" />
-      <input type="radio" name="buttons" id="r5" />
-     <div className="side">
-       <div className="">1</div>
-       <div className=""></div>
-       <div className=""></div>
-       <div className=""></div>
-       <div className=""></div>
-     </div>
-     <div className="controls">
-       <label htmlFor="r1"></label>
-       <label htmlFor="r2"></label>
-       <label htmlFor="r3"></label>
-       <label htmlFor="r4"></label>
-       <label htmlFor="r5"></label>
-       <i className='fas fa-arrow-left'></i>
-       <i className='fas fa-arrow-right'></i>
-     </div>
-    </div> */}
-    <div
+    
+      
+    {/* <div
   id="carouselDarkVariant"
   className="carousel slide carousel-fade carousel-dark relative  bg-[#555354] z-10 opacity-100"
   data-bs-ride="carousel"
@@ -141,8 +143,34 @@ const Banner =()=>{
     <span className="carousel-control-next-icon inline-block bg-no-repeat" aria-hidden="true"></span>
     <span className="visually-hidden">Next</span>
   </button>
-</div>
-
+</div> */}
+<Slider {...settings} className="w-full">
+          <div className="one">
+          <div data-aos="fade-down" className="flex w-1/2 justify-center items-center mt-96 text-center  mx-auto ">
+        <div>
+        <h5 className="text-4xl mb-10 text-white">  Poster and Design from the Pinccale of Formula1  </h5>
+        <button className='px-10 py-3  text-white text-3xl hover:bg-orange-400 hover:text-black rounded-md cursor-pointer border-2 border-orange-400' onClick={animeClick}> View All </button>
+        </div>
+      </div>
+          </div>
+          <div className='two'>
+          <div data-aos="fade-down" className="flex w-1/2 justify-center items-center mt-96 text-center  mx-auto ">
+        <div>
+        <h5 className="text-4xl mb-10 text-white"> Character Poster  </h5>
+        <button className='px-10 py-3  text-white text-3xl hover:bg-orange-400 hover:text-black rounded-md cursor-pointer border-2 border-orange-400' onClick={animeClick}> View All </button>
+        </div>
+      </div>
+          </div>
+          <div className='three'>
+          <div data-aos="fade-down" className="flex w-1/2 justify-center items-center mt-96 text-center  mx-auto ">
+        <div>
+        <h5 className="text-4xl mb-10 text-white"> Check Out our Favourite Anime Collection  </h5>
+        <button className='px-10 py-3  text-white text-3xl hover:bg-orange-400 hover:text-black rounded-md cursor-pointer border-2 border-orange-400' onClick={animeClick}> Shop Now </button>
+        </div>
+      </div>
+          </div>
+         
+        </Slider>
 {/* <Contact/> */}
         </>
     )
