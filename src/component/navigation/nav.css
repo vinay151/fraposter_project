@@ -1,6 +1,6 @@
 html {
     font-size: 62.5%;
-    /* overflow-x: hidden; */
+    overflow-x: hidden;
     scroll-behavior: smooth;
     scroll-padding-top: 7rem;
   }
@@ -36,18 +36,19 @@ html {
   }
   .header .dropmenu{
     position: absolute;
-    top: -300%;
-   
-    padding-left: 50px;
-    padding-right: 50px;
-    padding-top: 20px;
-    padding-bottom: 20px;
+    top: 100%;
+   display: none;
+   z-index: 100;
+   width: 200px;
+    padding:10px;
     background-color: white;
     box-shadow: 0 0.5rem 1.5rem rgba(0, 0, 0, 0.1);
   }
-  .header .dropmenu.hover-active{
-    top: 100%;
-  }
+  .header .drop:hover .dropmenu{
+    display: block;
+    
+  } 
+
 
 
  
@@ -69,9 +70,30 @@ html {
   }
   #menu-btn {
     display: none;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    border-radius: 0.5rem;
+    background-color: #eee;
+    color: black;
+    font-size: 2rem;
+    margin-left: 0.3rem;
+    cursor: pointer;
+    text-align: center;
   }
+ 
   #close-btn {
     display: none;
+    height: 4rem;
+    width: 4rem;
+    line-height: 4rem;
+    border-radius: 0.5rem;
+    background-color: #eee;
+    color: black;
+    font-size: 2rem;
+    margin-left: 0.3rem;
+    cursor: pointer;
+    text-align: center;
   }
   .header .search-form {
     position: absolute;
@@ -239,12 +261,16 @@ html {
   @media (max-width: 768px) {
     #menu-btn {
       display: inline-block;
+   
     }
+   #close-btn{
+     display: block;
+   }
+    
     .header .navbar {
-      position: absolute;
-      top: 110%;
-      right: -110%;
-      width: 30rem;
+      position: fixed;
+        top:-120%; left:0;
+        width:100%;
       background-color: #fff;
       border-radius: 0.5rem;
       box-shadow: var(--box-shadow);
@@ -257,7 +283,8 @@ html {
     }
   
     .header .navbar.is-expanded {
-      right: 2rem;
+      top:6.4rem;
+      transition: 0.4s linear;
     }
     .header .navbar a {
       font-size: 2rem;

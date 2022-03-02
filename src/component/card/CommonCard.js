@@ -40,7 +40,7 @@ const CommonCard=()=>{
                     <option value="Best Selling"> Date new to old </option>
                 </select>
             </div>
-    <div className="flex flex-wrap -mx-1 lg:-mx-4">
+    <div className="flex flex-wrap -mx-1 lg:-mx-4 mt-10">
         {
             commonData.map((e,i)=>{
                 return(
@@ -51,7 +51,7 @@ const CommonCard=()=>{
 <article className="overflow-hidden rounded-lg shadow-lg">
 
     <a href={e.link} >
-        <img alt="Placeholder" className="block h-auto w-full postercard" src="https://picsum.photos/600/400/?random"/>
+        <img alt="Placeholder" className="block h-auto w-full" src="https://picsum.photos/600/400/?random"/>
     </a>
 
     <header className=" text-center leading-tight p-2 md:p-4">
@@ -66,7 +66,7 @@ const CommonCard=()=>{
 
 
 </article>
-{/* <!-- END Article --> */}
+
 
 </div>
                     </>
@@ -74,11 +74,7 @@ const CommonCard=()=>{
             })
         }
 
-        {/* <!-- Column --> */}
-     
-        {/* <!-- END Column -->
-
-        <!-- Column --> */}
+       
        
 
     </div>

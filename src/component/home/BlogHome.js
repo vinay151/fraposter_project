@@ -10,14 +10,14 @@ const BlogHome =()=>{
     }
     return(
         <>
-          <div className="container-fluid py-10 px-48 bg-zinc-600">
+          <div className="container-fluid py-10 lg:px-48 px-20 bg-zinc-600">
           <div className="lg:flex space-x-6">
-              <div data-aos="fade-right" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="lg:w-1/3 w-full  bg-slate-300 shadow ">
+              <div className="lg:w-1/3 w-full  bg-slate-300 shadow ">
               <img src={one} alt="" className='block w-full p-2 cursor-pointer'/>
               </div>
-              <div data-aos="fade-left" data-aos-offset="200" data-aos-easing="ease-in-sine" data-aos-duration="600" className="pt-4 lg:w-4/6 w-full  text-white">
+              <div className="pt-4 lg:w-4/6 w-full  text-white">
                   <h6 className='lg:ml-6 ml-0 text-xl' >FEATURED BLOG</h6>
-                  <h1 className=' ml-0 mt-5 lg:ml-6 text-6xl'>Your Guide to selecting <br /> and <br /> customizing FraPoster</h1>
+                  <h1 className=' ml-0 mt-5 lg:ml-6 text-6xl leading-tight'>Your Guide to selecting <br /> and <br /> customizing FraPoster</h1>
                   <p className='  lg:text-2xl lg:ml-6 mt-6 ml-0 text-2xl'> Many Of us different fraposter ideas. You need something outlining,yet don't 
                   Many Of us different fraposter ideas. You need something outlining,yet don't  have the idea where ... </p>
                 <div className="mt-16 lg:ml-6 ml-0">

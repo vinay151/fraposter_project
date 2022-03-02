@@ -7,7 +7,7 @@ import {Home,Category,Phonelink,Settings,ShoppingCart,PowerSettingsNew} from '@m
 const Dashboard=()=>{
     return(
         <>
-     <div className="container-fluid mt-32 ">
+     <div className="container-fluid  mt-32">
        <nav className='h-20 px-10 bg-blue-600 flex items-center sticky top-0 left-0 z-20'>
            <div className="">
                <h1 className='text-4xl font-bold'>Fraposter</h1>

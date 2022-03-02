@@ -1,4 +1,4 @@
-import React, {createContext,useState} from "react";
+import React, {createContext} from "react";
 // import Nav from './component/navigation/Nav';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import About from "./pages/about";
@@ -26,10 +26,11 @@ import Checkout from "./pages/cart/checkout";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
+import Layout from "./Layout";
 AOS.init();
 
 function App() {
-const [status,setStatus]= useState(true)
+
 
 function cartCounterReducer(state, action){
     switch(action.type){
@@ -47,8 +48,8 @@ const [state, dispatch] = React.useReducer(cartCounterReducer, {count: 0})
     <>
     <BrowserRouter>
     <Nav/>
-    
-    <Routes>
+ 
+      <Routes>
       <Route exact path="/" element={<Home/>} />
       <Route exact path="/about" element={ <About/> }/>
       <Route exact path="/poster" element={ <Poster/> }/>
@@ -66,12 +67,11 @@ const [state, dispatch] = React.useReducer(cartCounterReducer, {count: 0})
       <Route exact path="/cart" element={ <Cart/> }/>
       <Route exact path="/check" element={ <Checkout/> }/>
      
-      {
-        status ? <Route exact path="/dashboard" element={ <Dashboard/> }/> : null 
-      }
-      
+    
+      <Route exact path="/dashboard" element={ <Dashboard/> }/>
   
     </Routes>
+
     </BrowserRouter>
     <Footer/>
     
