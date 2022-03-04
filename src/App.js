@@ -75,7 +75,7 @@ const [state, dispatch] = React.useReducer(cartCounterReducer, {count: 0})
 
     </BrowserRouter>
     <Footer/>
-    {/* <Chat/> */}
+    <Chat/>
    
 
     

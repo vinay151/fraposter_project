@@ -6,8 +6,9 @@ import CommonCard from '../component/card/CommonCard';
 const Anime=()=>{
     return(
         <>
+           <Breadcrumb heading="Anime Collection"/>
         <Hero head="Anime Collection" para="Anime art and the inspiration. Get premium posters and framed wall art of your favorite anime characters. All the famous anime posters in one section here."/>
-        <Breadcrumb heading="Anime Collection"/>
+     
         <CommonCard/>
         </>
     )

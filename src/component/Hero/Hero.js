@@ -6,11 +6,12 @@ const Hero=(props)=>{
         <>
          
         <div className="container-fluid" id="collection">
-            <div className="text-center relative top-32 z-20">
-                <h2 className='text-4xl  font-bold'> {props.head} </h2>
-                <p className='text-white text-2xl '> {props.para} </p>
-            </div>
+            
         </div>
+        <div className="text-center absolute  top-72 z-50">
+                <h2 className='text-6xl  font-extrabold'> {props.head} </h2>
+                <p className=' text-4xl w-1/2 z-50 mx-auto mt-5 '> {props.para} </p>
+            </div>
         
         </>
     )
