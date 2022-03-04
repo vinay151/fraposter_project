@@ -1,8 +1,6 @@
 import React from 'react';
 import a from '../../svg/pic-1.png';
-import b from '../../svg/pic-2.png';
-import c from '../../svg/pic-3.png';
-import d from '../../svg/pic-4.png';
+
 import '../home/banner.css';
 import {FaStar} from 'react-icons/fa';
 import Slider from "react-slick";

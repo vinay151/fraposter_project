@@ -52,7 +52,7 @@ const Footer = () => {
          </div>
         </div>
         <hr className="w-full lg:mt-0 mt-5"/>
-        <div className="mt-10 text-white text-center">
+        <div className="mt-10 text-white text-center p-5">
           <h2 className="text-2xl"> Copyright &copy; 2022 All Rights Reserve @Fraposter </h2>
         </div>
       </div>

@@ -26,7 +26,8 @@ import Checkout from "./pages/cart/checkout";
 
 import AOS from "aos";
 import "aos/dist/aos.css";
-import Layout from "./Layout";
+import Chat from "./component/whatsappchat/Chat";
+
 AOS.init();
 
 function App() {
@@ -74,7 +75,7 @@ const [state, dispatch] = React.useReducer(cartCounterReducer, {count: 0})
 
     </BrowserRouter>
     <Footer/>
-    
+    {/* <Chat/> */}
    
 
     

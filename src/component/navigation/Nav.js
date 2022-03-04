@@ -1,30 +1,18 @@
-import React,{useState,Fragment} from 'react';
+import React,{useState} from 'react';
 import ModalCart from './ModalCart';
 import '../navigation/nav.css';
 import {Link,useNavigate} from 'react-router-dom';
-import { FaAngleDown} from 'react-icons/fa'
+
 
 import cartCounter from '../navigation/countContext';
 
 const Nav =()=>{
 
   const context = React.useContext(cartCounter)
-  // const [changeColor, setChangeColor]=useState(false);
-  // const changeNavbar=()=>{
-  //   if(window.scrollY >= 80){
-  //     setChangeColor(true);
-  //   }
-  //   else{
-  //     setChangeColor(false);
-  //   }
-  // };
-  // window.addEventListener('scroll', changeNavbar);
+  
 
-  const navigate=useNavigate();
-  function checkoutClick(event){
-    event.preventDefault();
-    navigate("/check")
-  }
+  
+ 
   const user=useNavigate();
   function loginClick(event){
     event.preventDefault();
@@ -32,7 +20,7 @@ const Nav =()=>{
     user("/dashboard")
   }
   
- 
+  //  navigation menu hooks 
   const [open, setOpen]=useState(false);
   const closeMobileMenu = () => setOpen(false);
   const menuOpen=()=>{
@@ -41,7 +29,7 @@ const Nav =()=>{
       setOpenModal(false);
       setLoginOpen(false);
   }
-
+  // search popup hooks 
   const [searchForm, setSearchForm]=useState(false);
   const searchMenu=()=>{
       setSearchForm(searchForm === false ? true : false);
@@ -49,7 +37,7 @@ const Nav =()=>{
       setLoginOpen(false);
       setOpenModal(false);
   }
-
+//  cart modal popup hooks 
   const [openModal, setOpenModal]=useState(false);
   const cartMenu=()=>{
       setOpenModal(true);
@@ -57,7 +45,7 @@ const Nav =()=>{
       setSearchForm(false);
      setLoginOpen(false);
   }
-
+  // user login popup hooks 
   const [loginOpen, setLoginOpen]=useState(false);
   const loginMenu=()=>{
       setLoginOpen(loginOpen === false ? true : false);

@@ -2,6 +2,9 @@ import React from 'react';
 import { FaShippingFast } from 'react-icons/fa';
 import Breadcrumb from '../component/breadcrumb/Breadcrumb';
 const Track=()=>{
+    const trackSubmit=(event)=>{
+        event.preventDefault();
+    }
     return(
         <>
         <Breadcrumb heading="Track Your Order"/>
@@ -24,7 +27,7 @@ const Track=()=>{
                      
                   </div>
                   <div className="mt-8">
-                  <button className='px-24 py-5 rounded-lg bg-blue-500 text-white text-2xl ' type='submit'> Submit </button>
+                  <button className='px-24 py-5 rounded-lg bg-blue-500 text-white text-2xl ' type='submit' onClick={trackSubmit}> Submit </button>
                   </div>
               </form>
           </div>

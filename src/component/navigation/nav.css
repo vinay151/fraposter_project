@@ -263,6 +263,14 @@ html {
       display: inline-block;
    
     }
+    .slick-prev {
+  display: none;
+ 
+    }
+    
+    .slick-next {
+   display: none;
+    }
    #close-btn{
      display: block;
    }

@@ -7,6 +7,7 @@ const ModalCart = ({closeModal}) => {
     const check = useNavigate();
     function checkClick(event){
         event.preventDefault();
+        // setOpenModal(false);
            check("/check");
     }
 const context = useContext(cartCounter);
@@ -34,7 +35,7 @@ console.log(context.value)
      </div>
            <hr />
            <div className="mt-10">
-               <button className='w-full text-2xl text-center py-4 rounded-lg bg-orange-500 text-white' onClick={checkClick} >Checkout</button>
+               <button className='w-full text-2xl text-center py-5 rounded-lg bg-orange-500 text-white' onClick={checkClick} >Checkout</button>
            </div>
        
        </div>

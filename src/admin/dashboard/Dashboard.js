@@ -1,9 +1,6 @@
 import React from 'react';
-import ListItem from '@material-ui/core/ListItem';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
-import ListItemText from '@material-ui/core/ListItemText';
-import List from '@material-ui/core/List';
-import {Home,Category,Phonelink,Settings,ShoppingCart,PowerSettingsNew} from '@material-ui/icons';
+import { Link } from 'react-router-dom';
+
 const Dashboard=()=>{
     return(
         <>
@@ -14,50 +11,20 @@ const Dashboard=()=>{
            </div>
        </nav>
       <div className="flex space-x-4">
-      <div className='w-60 h-auto border-r'>
-        <ul className='bg-white shadow-xl px-5 '>
-        <List>
-      
-              <ListItem button >
-              <ListItemIcon style={{fontSize:"50px"}}>
-                  <Home/>
-              </ListItemIcon>
-                <ListItemText primary="Home" />
-              </ListItem>
-              <ListItem button>
-              <ListItemIcon>
-                  <Category/>
-              </ListItemIcon>
-                <ListItemText primary="Categories" />
-              </ListItem>
-              <ListItem button>
-              <ListItemIcon>
-                  <ShoppingCart/>
-              </ListItemIcon>
-                <ListItemText primary="Products" />
-              </ListItem>
-              <ListItem button>
-              <ListItemIcon>
-                  <Phonelink/>
-              </ListItemIcon>
-                <ListItemText primary="Orders" />
-              </ListItem>
-              <ListItem button>
-              <ListItemIcon>
-                  <Settings/>
-              </ListItemIcon>
-                <ListItemText primary="Setting" />
-              </ListItem>
-              <ListItem button>
-              <ListItemIcon>
-              <PowerSettingsNew/>
-              </ListItemIcon>
-                <ListItemText primary="Logout" />
-              </ListItem>
-          </List>
+      <div className='w-80 h-auto border-r'>
+        <ul className='bg-white shadow-xl px-8 '>
+          <li className='py-5'> <Link to="#" className='text-2xl hover:bg-gray-200 p-4 rounded-md  '> <i className="fa fa-home mr-2" aria-hidden="true"></i> Home </Link> </li>
+          <li className='py-5'> <Link to="#" className='text-2xl hover:bg-gray-200 p-4 rounded-md  '> <i className="fa fa-home mr-2" aria-hidden="true"></i> Categories </Link> </li>
+          <li className='py-5'> <Link to="#" className='text-2xl hover:bg-gray-200 p-4 rounded-md  '> <i className="fa-solid fa-cart-shopping mr-2"></i> Products </Link> </li>
+          <li className='py-5'> <Link to="#" className='text-2xl hover:bg-gray-200 p-4 rounded-md  '> <i className="fa-solid fa-phone mr-2"></i> Orders </Link> </li>
+          <li className='py-5'> <Link to="#" className='text-2xl hover:bg-gray-200 p-4 rounded-md  '> <i className="fa-solid fa-gear mr-2"></i> Setting </Link> </li>
+          <li className='py-5'> <Link to="#" className='text-2xl hover:bg-gray-200 p-4 rounded-md  '> <i className="fa fa-power-off mr-2" aria-hidden="true"></i>  Logout </Link> </li>
+       
         </ul>
        </div>
        <div className="text-2xl">
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, nihil?</p>
+           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, nihil?</p>
            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit, nihil?</p>
        </div>
       </div>

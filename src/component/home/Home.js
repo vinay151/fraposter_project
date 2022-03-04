@@ -5,7 +5,7 @@ import BlogHome from './BlogHome';
 import Service from './Service';
 import MainSticker from './MainSticker';
 import Testimonial from './Testimonial';
-import Layout from './../../Layout'
+
 // import Footer from './Footer';
 const Home =()=>{
     return(
