@@ -1,4 +1,4 @@
-import React, {createContext} from "react";
+import React from "react";
 // import Nav from './component/navigation/Nav';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import About from "./pages/about";
@@ -24,11 +24,10 @@ import cartCounter from './component/navigation/countContext'
 import Dashboard from "./admin/dashboard/Dashboard";
 import Checkout from "./pages/cart/checkout";
 
-import AOS from "aos";
-import "aos/dist/aos.css";
+
 import Chat from "./component/whatsappchat/Chat";
 
-AOS.init();
+
 
 function App() {
 

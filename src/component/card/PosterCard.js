@@ -6,50 +6,50 @@ import four from "../../svg/one-image.webp";
 import five from "../../svg/twostick.PNG";
 // import tick from '../warranty.png';
 import '../card/card.css';
-import { Link } from "react-router-dom";
+// import { Link } from "react-router-dom";
 
 const PosterCard = () => {
  
 
 
-  const posterData = [
-    {
-      pimage: one,
-      head: "Anime",
-      btn: "Shop Now",
-      link:"/anime"
-    },
-    {
-      pimage: two,
-      head: "Formula1",
-      btn: "Shop Now",
-      link:"/formula1"
-    },
-    {
-      pimage: thre,
-      head: "Sport",
-      btn: "Shop Now",
-      link:"/sport"
-    },
-    {
-      pimage: four,
-      head: "Character",
-      btn: "Shop Now",
-      link:"/charposter"
-    },
-    {
-      pimage: one,
-      head: "Motorsport",
-      btn: "Shop Now",
-      link:"/motor"
-    },
-    {
-      pimage: one,
-      head: "Motivational",
-      btn: "Shop Now",
-      link:"/motivational"
-    },
-  ];
+  // const posterData = [
+  //   {
+  //     pimage: one,
+  //     head: "Anime",
+  //     btn: "Shop Now",
+  //     link:"/anime"
+  //   },
+  //   {
+  //     pimage: two,
+  //     head: "Formula1",
+  //     btn: "Shop Now",
+  //     link:"/formula1"
+  //   },
+  //   {
+  //     pimage: thre,
+  //     head: "Sport",
+  //     btn: "Shop Now",
+  //     link:"/sport"
+  //   },
+  //   {
+  //     pimage: four,
+  //     head: "Character",
+  //     btn: "Shop Now",
+  //     link:"/charposter"
+  //   },
+  //   {
+  //     pimage: one,
+  //     head: "Motorsport",
+  //     btn: "Shop Now",
+  //     link:"/motor"
+  //   },
+  //   {
+  //     pimage: one,
+  //     head: "Motivational",
+  //     btn: "Shop Now",
+  //     link:"/motivational"
+  //   },
+  // ];
   return (
     <>
       <div className="container my-20 mx-auto lg:px-36 px-20 ">

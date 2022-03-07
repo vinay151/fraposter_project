@@ -1,4 +1,4 @@
-import React,{useState} from 'react';
+import React from 'react';
 import Breadcrumb from '../component/breadcrumb/Breadcrumb';
 import {FaStar} from 'react-icons/fa';
 import r from '../svg/twostick.PNG';
@@ -100,7 +100,7 @@ const handleChange = (panel) => (event, newExpanded) => {
     return(
         <>
         <Breadcrumb heading="Review"/>
-        <div className="container-fluid py-20 lg:px-48 px-6" data-aos="zoom-in-up">
+        <div className="container-fluid py-20 lg:px-48 px-6" >
         <h1 className='text-6xl font-extrabold'>REVIEW</h1>
         <div className="border-2 mt-5 ">
           <div className="">
