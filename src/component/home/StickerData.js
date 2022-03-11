@@ -19,8 +19,8 @@ const StickerData=(props)=>{
   // };
   const options = {
     loop: true,
-    dots: true,
-    dotsData: true,
+   
+    dotsdata:"value.toString()",
     margin: 10,
     autoplay: true,
     autoplayTimeout: 2000,

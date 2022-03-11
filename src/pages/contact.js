@@ -4,6 +4,7 @@ import { useFormik } from "formik";
 import * as Yup from "yup";
 // import tick from '../warranty.png';
 const Contact = () => {
+  const [print,setPrint]= useState();
   const [result, setResult] = useState([]);
   const phoneRegExp = /^((\\+[1-9]{1,4}[ \\-]*)|(\\([0-9]{2,3}\\)[ \\-]*)|([0-9]{2,4})[ \\-]*)*?[0-9]{3,4}?[ \\-]*[0-9]{3,4}?$/
   const { handleSubmit, handleChange, handleBlur, values, errors, touched } =
@@ -18,6 +19,8 @@ const Contact = () => {
       },
       onSubmit: (values) => {
         setResult([...result, values]);
+        alert(JSON.stringify(values));
+        setPrint(values)
         // reset();
       },
       validationSchema: Yup.object({
@@ -169,6 +172,9 @@ const Contact = () => {
             </button>
           </div>
         </form>
+        {
+          print? <div className=""> Thanks For Visiting us </div> :""
+        }
         </div>
         <div className="lg:w-1/2 w-full pl-3 ">
         <iframe src="https://www.google.com/maps/embed?pb=!1m16!1m12!1m3!1d2965.0824050173574!2d-93.63905729999999!3d41.998507000000004!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!2m1!1sWebFilings%2C+University+Boulevard%2C+Ames%2C+IA!5e0!3m2!1sen!2sus!4v1390839289319" width="100%" height="725" frameborder="0" style={{border:"0px"}} title="map"/>

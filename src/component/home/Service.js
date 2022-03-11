@@ -7,7 +7,7 @@ const serviceData=[
     {
         simg:p,
         head:"Premium Quality",
-        para:"Our posters are printed with best in class printers and have unique glossy finish.",
+        para:"Our posters are printed with best in className printers and have unique glossy finish.",
     },
     {
         simg:f,
@@ -29,13 +29,13 @@ const Service =()=>{
                      serviceData.map((e,i)=>{
                          return(
                              <>
-                                <div className=" w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3 ">
-                 <article class="overflow-hidden ">
-                 <img alt="Placeholder" class="mx-auto" src={e.simg}/>
+                                <div className=" w-full md:w-1/2 lg:my-4 lg:px-4 lg:w-1/3 " key={i}>
+                 <article className="overflow-hidden ">
+                 <img alt="Placeholder" className="mx-auto" src={e.simg}/>
     
 
-    <header class="text-center mt-4">
-        <h1 class="text-3xl font-semibold">
+    <header className="text-center mt-4">
+        <h1 className="text-3xl font-semibold">
             
     {e.head}
             

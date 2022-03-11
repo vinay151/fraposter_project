@@ -53,7 +53,7 @@ const Testimonial=()=>{
         reviewData.map((e,i)=>{
           return(
             <>
-       <div className="bg-white shadow-inner  py-20 px-10 border test">
+       <div className="bg-white shadow-inner  py-20 px-10 border test" key={i}>
        <div className="flex lg:flex-nowrap flex-wrap space-x-10">
          <img src={a} alt="" className='w-40 h-40 lg:m-0 mx-auto rounded-full' />
          <div className="mt-2">

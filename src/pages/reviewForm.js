@@ -1,11 +1,14 @@
 import React from 'react';
 import {FaStar} from 'react-icons/fa';
 const ReviewForm=()=>{
+    const handleSubmit=(e)=>{
+        e.preventDefault();
+    }
     return(
         <>
        <div className="container  py-5">
         <div className=" p-4">
-            <form className='text-3xl'>
+            <form className='text-3xl' onSubmit={handleSubmit}>
               
                    <div className=""> <label htmlFor="name">Name </label></div>
                     <div className="mt-1">
@@ -42,7 +45,7 @@ const ReviewForm=()=>{
                     <input type="text" name="" id="" className='border-2 w-full py-5 px-4 bg-[#F2ECFF] rounded-md' placeholder='Youtube Url' />
                 </div>
                 <div className="mt-5">
-                   <button className='px-8 py-6 bg-orange-600 rounded-md text-white text-3xl '> Submit Review </button>
+                   <button type='button' className='px-8 py-6 bg-orange-600 rounded-md text-white text-3xl'  > Submit Review </button>
                 </div>
             </form>
         </div>

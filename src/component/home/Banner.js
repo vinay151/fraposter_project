@@ -60,7 +60,7 @@ const Banner =()=>{
    
 <Slider {...settings} className="w-full">
           <div className="one">
-          <div data-aos="fade-down" className="flex w-1/2 justify-center items-center mt-96 text-center  mx-auto ">
+          <div className="flex w-1/2 justify-center items-center mt-96 text-center  mx-auto ">
         <div>
         <h5 className="text-4xl mb-10 text-white">  Poster and Design  </h5>
         <button className='px-10 py-3  text-white text-3xl hover:bg-orange-400 hover:text-black rounded-md cursor-pointer border-2 border-orange-400' onClick={animeClick}> View All </button>
@@ -68,7 +68,7 @@ const Banner =()=>{
       </div>
           </div>
           <div className='two'>
-          <div data-aos="fade-down" className="flex w-1/2 justify-center items-center mt-96 text-center  mx-auto ">
+          <div className="flex w-1/2 justify-center items-center mt-96 text-center  mx-auto ">
         <div>
         <h5 className="text-4xl mb-10 text-white"> Character Poster  </h5>
         <button className='px-10 py-3  text-white text-3xl hover:bg-orange-400 hover:text-black rounded-md cursor-pointer border-2 border-orange-400' onClick={charClick}> View All </button>
@@ -76,7 +76,7 @@ const Banner =()=>{
       </div>
           </div>
           <div className='three'>
-          <div data-aos="fade-down" className="flex w-1/2 justify-center items-center mt-96 text-center  mx-auto ">
+          <div  className="flex w-1/2 justify-center items-center mt-96 text-center  mx-auto ">
         <div>
         <h5 className="text-4xl mb-10 text-white"> Check Out our Favourite Anime Collection  </h5>
         <button className='px-10 py-3  text-white text-3xl hover:bg-orange-400 hover:text-black rounded-md cursor-pointer border-2 border-orange-400' onClick={formulaClick}> Shop Now </button>
