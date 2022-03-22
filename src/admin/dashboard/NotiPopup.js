@@ -3,7 +3,7 @@ import {FaCog,FaCalendarDay,FaLink} from 'react-icons/fa';
 const NotiPopup = () => {
   return (
     <>
-    <div className="absolute  top-64 lg:right-72 -right-8 z-20   bg-white shadow-lg lg:w-1/4 w-full p-4 ">
+    <div className="absolute  top-64 lg:right-72 right-2  z-20   bg-white shadow-lg lg:w-1/4 w-3/4 p-4 ">
             <h2 className='text-3xl mb-3 text-black font-semibold'> Notification </h2>
             <hr />
             <div className="flex items-center space-x-8 my-5">

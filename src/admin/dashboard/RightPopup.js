@@ -1,11 +1,19 @@
+
 import React from 'react';
+import { useNavigate } from 'react-router-dom';
 const RightPopup=()=>{
+    const navigate = useNavigate;
+    const handleClick = (event)=>{
+    navigate("/chat");
+    event.preventDefault();
+
+    }
     return(
         <>
         <div className="lg:w-1/4 w-full shadow-md lg:right-2 -right-40 z-20 bg-white absolute">
         <div className="flex p-6 space-x-6 items-center bg-purple-400 justify-center">
            <h1 className='text-2xl cursor-pointer text-white'>TO DO LIST</h1>
-           <h1 className='text-2xl cursor-pointer text-white'>CHATS</h1>
+           <h1 className='text-2xl cursor-pointer text-white' onClick={handleClick} >CHATS</h1>
         </div>
         <div className="p-4">
             <h1 className='text-2xl font-semibold'>To Do List</h1>

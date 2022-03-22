@@ -26,6 +26,7 @@ import Checkout from "./pages/cart/checkout";
 
 
 import Chat from "./component/whatsappchat/Chat";
+import ChatPopup from "./admin/dashboard/ChatPopup";
 
 
 
@@ -66,10 +67,10 @@ const [state, dispatch] = React.useReducer(cartCounterReducer, {count: 0})
       <Route exact path="/charposter" element={ <CharPoster/> }/>
       <Route exact path="/cart" element={ <Cart/> }/>
       <Route exact path="/check" element={ <Checkout/> }/>
-     
-    
+       <Route exact path = "/chat" element={<ChatPopup/>}/>
+
       <Route exact path="/dashboard" element={ <Dashboard/> }/>
-  
+
     </Routes>
 
     </BrowserRouter>

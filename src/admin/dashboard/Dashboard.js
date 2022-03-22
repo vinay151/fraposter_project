@@ -18,6 +18,8 @@ import RightPopup from './RightPopup';
 
 
 const Dashboard=()=>{
+
+
   const tabledata = [
     {
       "assignment":'Davin',
@@ -49,23 +51,28 @@ const Dashboard=()=>{
 },
 
 ]
+
+
     const [modalOne,setModalOne] = useState(false);
 const messageClick=()=>{
     setModalOne(modalOne === false ? true : false);  
    
    setMessagesOpen(false);
-   setNotiOpen(false);  
+   setNotiOpen(false); 
+   setRightOpen(false); 
 }
 const [messageOpen,setMessagesOpen] = useState(false);
 const popupMessage=()=>{
     setMessagesOpen(messageOpen === false ? true : false); 
    setModalOne(false);
    setNotiOpen(false);
+   setRightOpen(false);
 }
 const [notiOpen,setNotiOpen] = useState(false);
 const notiMessage=()=>{
     setNotiOpen(notiOpen === false ? true : false); 
    setModalOne(false);
+   setRightOpen(false);
    setMessagesOpen(false);
   }
   const [rightOpen,setRightOpen] = useState(false);
@@ -95,7 +102,7 @@ const rightMessage=()=>{
     return(
         <>
      <div className="container-fluid  mt-32">
-       <nav className=' bg-white shadow-lg py-5 flex justify-between px-32 items-center sticky top-0 left-0 z-20'>
+       <nav className=' bg-white w-full shadow-lg py-5 flex justify-between px-32 items-center sticky top-0 left-0 z-20'>
            <div className="">
                <h1 className='text-4xl font-bold'>Fraposter</h1>
            </div>
@@ -108,13 +115,13 @@ const rightMessage=()=>{
           
             <li> <Link to="#" className='text-3xl text-gray-400' onClick={notiMessage} ><i className="fa-solid fa-bell"></i>  <span className='text-8xl text-red-500 absolute bottom-16'> . </span> </Link> </li>
           
-            <li> <Link to="#" className='text-3xl text-gray-400'> <FaPowerOff/> </Link> </li>
-            <li> <Link to="#" className='text-3xl text-gray-400' onClick={rightMessage} > <FaListUl/> </Link> </li>
+            <li className='lg:block hidden'> <Link to="#" className='text-3xl text-gray-400'> <FaPowerOff/> </Link> </li>
+            <li className='lg:block hidden'> <Link to="#" className='text-3xl text-gray-400' onClick={rightMessage} > <FaListUl/> </Link> </li>
         </ul>
        
        </nav>
         {
-            modalOne? <div className="absolute top-64 px-10 right-1/3 rounded-md py-4 z-20  bg-white shadow-lg  ">
+            modalOne?  <div className="absolute top-64 px-10 right-1/3 rounded-md py-4 z-20  bg-white shadow-lg  ">
       
             <ul> 
                 <li> <Link to="#" className='text-2xl'> Activity Log  </Link> </li>
@@ -133,7 +140,7 @@ const rightMessage=()=>{
          rightOpen ? <RightPopup/> :""
        }
       <div className="flex space-x-4">
-      <div className='lg:w-80 w-full h-auto border-r'>
+      <div className='lg:w-80 w-full h-auto lg:block hidden border-r'>
         <ul className='bg-white px-8 '>
           <li className='py-5'> <Link to="#" className='text-2xl hover:bg-gray-200 p-4 rounded-md  '> <i className="fa fa-home mr-2" aria-hidden="true"></i> Home </Link> </li>
           <li className='py-5'> <Link to="#" className='text-2xl hover:bg-gray-200 p-4 rounded-md  '> <i className="fa fa-home mr-2" aria-hidden="true"></i> Categories </Link> </li>
@@ -152,17 +159,17 @@ const rightMessage=()=>{
              
              <div className="grid grid-cols-1 lg:grid-cols-3">
                 <div className="bg-gradient-to-r from-rose-400 to-orange-300 p-16 m-10 text-white rounded-lg">
-                    <div className="flex items-center justify-between"><h2 className='text-3xl  '>Weakly Sales</h2> <i className="fa-thin fa-arrow-trend-up text-3xl"></i> </div>
+                    <div className="flex items-center justify-between"><h2 className='text-3xl  '>Weekly Sales</h2> <i className="fa-thin fa-arrow-trend-up text-3xl"></i> </div>
                     <h2 className='text-3xl mt-8 font-bold'> $ 150000 </h2>
                     <p className='mt-20 text-xl '> Increased by 60% </p>
                     </div>
                     <div className="bg-gradient-to-r from-cyan-500 to-blue-500 p-16 text-white m-10 rounded-lg">
-                  <div className="flex items-center justify-between">      <h2 className='text-3xl  '>Weakly Sales</h2>  <FaRegBookmark className='text-3xl'/> </div>
+                  <div className="flex items-center justify-between">      <h2 className='text-3xl'>Weekly Orders </h2>  <FaRegBookmark className='text-3xl'/> </div>
                     <h2 className='text-3xl mt-8 font-bold'> 45,6334 </h2>
                     <p className='mt-20 text-xl'> Decreased by 10% </p>
                     </div>
                     <div className="bg-[#3ED2BE] p-16 text-white m-10 rounded-lg">
-                    <h2 className='text-3xl  '>Weakly Sales</h2>
+                    <h2 className='text-3xl  '> Visitors Online </h2>
                     <h2 className='text-3xl mt-8 font-bold'> 95,7685 </h2>
                     <p className='mt-20 text-xl '> Increased by 5% </p>
                     </div>
@@ -255,9 +262,7 @@ Tracking Id
 
 
 
-{/* <td className="py-4 px-6 text-xl font-medium text-right whitespace-nowrap">
-<a href="#" className="text-blue-600 dark:text-blue-500 hover:underline">Edit</a>
-</td> */}
+
 </tbody>
 </table>
 </div>
@@ -293,7 +298,8 @@ Tracking Id
                              </div>
                            </div>
                          </div>
-              <TableData/>
+              <TableData />
+              
        </div>
       </div>
      </div>
